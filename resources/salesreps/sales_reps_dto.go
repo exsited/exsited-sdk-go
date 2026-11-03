@@ -10,7 +10,7 @@ type SettingsSalesRepList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsSalesRepList was measured from.
+// MeasuredFrom lists the endpoints SettingsSalesRepList is returned by.
 func (SettingsSalesRepList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/sales_reps",
@@ -34,7 +34,7 @@ type SettingsSalesRepRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsSalesRepRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsSalesRepRecord is returned by.
 func (SettingsSalesRepRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/sales_reps",

@@ -43,9 +43,9 @@ func (a *Accounts) GetAccounts(ctx context.Context, queryParams map[string]any, 
 
 // GetAccount retrieves one account: GET /api/{api_version}/accounts/{account_id}.
 //
-// accountID is the account's id - the short code a response carries, "W13ZGY".
-// Not the uuid: a response carries both, only id addresses the record in a path,
-// and the uuid answers 404. Use the uuid with filter_uuid on GetAccounts instead.
+// accountID is the account's id - the short code a response carries, "your-account-id".
+// Not the uuid: a response carries both, and only id addresses the record in a path.
+// Use the uuid with filter_uuid on GetAccounts instead.
 func (a *Accounts) GetAccount(ctx context.Context, accountID any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
@@ -168,8 +168,7 @@ func (a *Accounts) GetAccountQuotePartialInvoices(ctx context.Context, accountID
 // GetAccountContact retrieves one contact, addressed by its type: GET /api/{api_version}/accounts/{account_id}/contacts/{contact_type}.
 //
 // contactType is "billing", "shipping" or "primary" - not its id. An account holds
-// at most one contact of each type, so the type addresses it; passing the "con_…"
-// id answers 404.
+// at most one contact of each type, so the type addresses it.
 func (a *Accounts) GetAccountContact(ctx context.Context, accountID any, contactType any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
@@ -192,9 +191,7 @@ func (a *Accounts) GetAccountAddress(ctx context.Context, accountID any, address
 }
 
 // GetAccountPaymentMethod retrieves one payment method by its "pm_…" id: GET /api/{api_version}/accounts/{account_id}/payment_methods/{payment_method_id}.
-//
-// For a method id that does not belong to the account this answers 200 with no
-// payment_methods key at all, not 404. Check for the key before indexing.
+
 func (a *Accounts) GetAccountPaymentMethod(ctx context.Context, accountID any, paymentMethodID any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
@@ -393,8 +390,7 @@ func (a *Accounts) GetAccountCustomObjects(ctx context.Context, accountID any, q
 // CancelAccount cancels an account, effective on a date: POST /api/{api_version}/accounts/{account_id}/cancel.
 //
 // payload is a map, a JSON string sent byte-for-byte, or an *AccountCancelBody.
-// All three put the same bytes on the wire. effective_date is YYYY-MM-DD; any
-// other format is a 400 with code "invalid".
+// All three put the same bytes on the wire. effective_date is YYYY-MM-DD.
 func (a *Accounts) CancelAccount(ctx context.Context, accountID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requirePayload(payload); err != nil {
 		return nil, err
@@ -430,8 +426,7 @@ func (a *Accounts) SetAccountPassword(ctx context.Context, accountID any, payloa
 //
 // A partial update: send only the fields to change. Writes are flatter than reads
 // - currency and time_zone go in as plain strings while the read returns nested
-// objects, so posting a read body back unchanged is a 400. addresses and
-// communication_preference are refused with code not_understood.
+// objects. addresses and communication_preference are not accepted here.
 func (a *Accounts) UpdateAccountInformation(ctx context.Context, accountID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requirePayload(payload); err != nil {
 		return nil, err
@@ -518,9 +513,7 @@ func (a *Accounts) ReplaceAccountContact(ctx context.Context, accountID any, con
 
 // ReplaceAccountBillingPreferences replaces an account's billing preferences: PUT /api/{api_version}/accounts/{account_id}/billing_preferences.
 //
-// billing_start_date is an enum, not a date - "DAY_OF_MONTH" and the like. A
-// calendar date is a 400 with code matches_invalid, which reads as a formatting
-// complaint and is really a type one.
+// billing_start_date is an enum, not a date - "DAY_OF_MONTH" and the like.
 func (a *Accounts) ReplaceAccountBillingPreferences(ctx context.Context, accountID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requirePayload(payload); err != nil {
 		return nil, err
@@ -603,10 +596,8 @@ func (a *Accounts) UploadAccountImage(ctx context.Context, accountID any, payloa
 
 // DeleteAccount deletes an account: DELETE /api/{api_version}/accounts/{account_id}.
 //
-// A 409 means the account is locked: one with orders, invoices or payments
-// against it cannot be deleted, and the API answers "Account has been locked, this
-// action cannot be performed" with code internal_error. It is a business rule, not
-// a server fault, so do not retry it.
+// An account with orders, invoices or payments against it cannot be deleted. That
+// is a business rule, not a server fault, so do not retry it.
 func (a *Accounts) DeleteAccount(ctx context.Context, accountID any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {

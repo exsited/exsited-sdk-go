@@ -10,7 +10,7 @@ type SettingsZoneList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsZoneList was measured from.
+// MeasuredFrom lists the endpoints SettingsZoneList is returned by.
 func (SettingsZoneList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/zones",
@@ -32,7 +32,7 @@ type SettingsZoneRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsZoneRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsZoneRecord is returned by.
 func (SettingsZoneRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/zones",

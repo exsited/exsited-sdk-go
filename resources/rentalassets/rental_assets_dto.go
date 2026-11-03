@@ -46,7 +46,7 @@ type RentalAssetRecord struct {
 	Version                       *int64
 }
 
-// MeasuredFrom lists the endpoints RentalAssetRecord was measured from.
+// MeasuredFrom lists the endpoints RentalAssetRecord is returned by.
 func (RentalAssetRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_assets",
@@ -69,7 +69,7 @@ type RentalAssetList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints RentalAssetList was measured from.
+// MeasuredFrom lists the endpoints RentalAssetList is returned by.
 func (RentalAssetList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_assets",
@@ -97,7 +97,7 @@ type RentalAssetProfileRecord struct {
 	Version                    *int64
 }
 
-// MeasuredFrom lists the endpoints RentalAssetProfileRecord was measured from.
+// MeasuredFrom lists the endpoints RentalAssetProfileRecord is returned by.
 func (RentalAssetProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_asset_profiles",
@@ -112,7 +112,7 @@ type RentalAssetProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints RentalAssetProfileList was measured from.
+// MeasuredFrom lists the endpoints RentalAssetProfileList is returned by.
 func (RentalAssetProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_asset_profiles",
@@ -137,7 +137,7 @@ type RentalAssetAvailabilityRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints RentalAssetAvailabilityRecord was measured from.
+// MeasuredFrom lists the endpoints RentalAssetAvailabilityRecord is returned by.
 func (RentalAssetAvailabilityRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_asset_availability",
@@ -152,7 +152,7 @@ type RentalAssetAvailabilityList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints RentalAssetAvailabilityList was measured from.
+// MeasuredFrom lists the endpoints RentalAssetAvailabilityList is returned by.
 func (RentalAssetAvailabilityList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_asset_availability",
@@ -181,7 +181,7 @@ type RentalAssetProfileReadRecord struct {
 	Version                    *int64
 }
 
-// MeasuredFrom lists the endpoints RentalAssetProfileReadRecord was measured from.
+// MeasuredFrom lists the endpoints RentalAssetProfileReadRecord is returned by.
 func (RentalAssetProfileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/rental_asset_profiles/{rental_asset_profile_id}",

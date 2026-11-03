@@ -10,7 +10,7 @@ type SettingsWorkflowList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsWorkflowList was measured from.
+// MeasuredFrom lists the endpoints SettingsWorkflowList is returned by.
 func (SettingsWorkflowList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/workflows",
@@ -37,7 +37,7 @@ type SettingsWorkflowRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsWorkflowRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsWorkflowRecord is returned by.
 func (SettingsWorkflowRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/workflows",

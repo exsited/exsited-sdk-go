@@ -35,7 +35,7 @@ type ApprovalsAccountRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints ApprovalsAccountRecord was measured from.
+// MeasuredFrom lists the endpoints ApprovalsAccountRecord is returned by.
 func (ApprovalsAccountRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/approvals/account",
@@ -50,7 +50,7 @@ type ApprovalsAccountList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ApprovalsAccountList was measured from.
+// MeasuredFrom lists the endpoints ApprovalsAccountList is returned by.
 func (ApprovalsAccountList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/approvals/account",
@@ -65,7 +65,7 @@ type ApprovalsSaleorderRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ApprovalsSaleorderRecord was measured from.
+// MeasuredFrom lists the endpoints ApprovalsSaleorderRecord is returned by.
 func (ApprovalsSaleorderRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/approvals/saleOrder",

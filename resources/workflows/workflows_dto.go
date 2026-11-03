@@ -10,7 +10,7 @@ type WorkflowMilestoneList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints WorkflowMilestoneList was measured from.
+// MeasuredFrom lists the endpoints WorkflowMilestoneList is returned by.
 func (WorkflowMilestoneList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/workflows/{workflow_uuid}/milestones",
@@ -38,7 +38,7 @@ type WorkflowMilestoneRecord struct {
 	WorkflowVersion    *WorkflowVersion
 }
 
-// MeasuredFrom lists the endpoints WorkflowMilestoneRecord was measured from.
+// MeasuredFrom lists the endpoints WorkflowMilestoneRecord is returned by.
 func (WorkflowMilestoneRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/workflows/{workflow_uuid}/milestones",
@@ -93,7 +93,7 @@ type WorkflowList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints WorkflowList was measured from.
+// MeasuredFrom lists the endpoints WorkflowList is returned by.
 func (WorkflowList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/workflows",
@@ -164,7 +164,7 @@ type WorkflowMilestoneView struct {
 	WorkflowVersion    *WorkflowMilestoneWorkflowVersion
 }
 
-// MeasuredFrom lists the endpoints WorkflowMilestoneView was measured from.
+// MeasuredFrom lists the endpoints WorkflowMilestoneView is returned by.
 func (WorkflowMilestoneView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/workflows/{workflow_id}/milestones/{milestone_id}",

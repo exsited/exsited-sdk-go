@@ -40,7 +40,7 @@ type SettingsAccountingCodeRecord struct {
 	Version         *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsAccountingCodeRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsAccountingCodeRecord is returned by.
 func (SettingsAccountingCodeRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/accounting_codes",
@@ -61,7 +61,7 @@ type SettingsAccountingCodeList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsAccountingCodeList was measured from.
+// MeasuredFrom lists the endpoints SettingsAccountingCodeList is returned by.
 func (SettingsAccountingCodeList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/accounting_codes",

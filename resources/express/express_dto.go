@@ -52,7 +52,7 @@ type ExpressCreateRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints ExpressCreateRecord was measured from.
+// MeasuredFrom lists the endpoints ExpressCreateRecord is returned by.
 func (ExpressCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/express",

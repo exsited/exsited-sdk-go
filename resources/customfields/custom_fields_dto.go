@@ -10,7 +10,7 @@ type SettingsCustomFieldList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomFieldList was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomFieldList is returned by.
 func (SettingsCustomFieldList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_fields",
@@ -35,7 +35,7 @@ type SettingsCustomFieldRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomFieldRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomFieldRecord is returned by.
 func (SettingsCustomFieldRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_fields",

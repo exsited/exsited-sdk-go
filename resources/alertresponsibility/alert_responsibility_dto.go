@@ -10,7 +10,7 @@ type AlertResponsibilityList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AlertResponsibilityList was measured from.
+// MeasuredFrom lists the endpoints AlertResponsibilityList is returned by.
 func (AlertResponsibilityList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/alert_responsibility",
@@ -32,7 +32,7 @@ type AlertResponsibilityRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints AlertResponsibilityRecord was measured from.
+// MeasuredFrom lists the endpoints AlertResponsibilityRecord is returned by.
 func (AlertResponsibilityRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/alert_responsibility",

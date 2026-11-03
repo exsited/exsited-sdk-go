@@ -45,7 +45,7 @@ type PurchaseRefundsRecord struct {
 	Version          *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseRefundsRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseRefundsRecord is returned by.
 func (PurchaseRefundsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_refunds",
@@ -78,7 +78,7 @@ type PurchaseRefundRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseRefundRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseRefundRecord is returned by.
 func (PurchaseRefundRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_refunds/{purchase_refund_id}",
@@ -96,7 +96,7 @@ type AccountPurchaseRefundsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountPurchaseRefundsRecord was measured from.
+// MeasuredFrom lists the endpoints AccountPurchaseRefundsRecord is returned by.
 func (AccountPurchaseRefundsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/purchase_refunds",

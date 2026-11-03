@@ -44,7 +44,7 @@ type UsageRecord struct {
 	Version           *int64
 }
 
-// MeasuredFrom lists the endpoints UsageRecord was measured from.
+// MeasuredFrom lists the endpoints UsageRecord is returned by.
 func (UsageRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/usages",
@@ -63,7 +63,7 @@ type UsageList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints UsageList was measured from.
+// MeasuredFrom lists the endpoints UsageList is returned by.
 func (UsageList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/usages",
@@ -98,7 +98,7 @@ type UsagesRecord struct {
 	Version          *string
 }
 
-// MeasuredFrom lists the endpoints UsagesRecord was measured from.
+// MeasuredFrom lists the endpoints UsagesRecord is returned by.
 func (UsagesRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/usages",
@@ -117,7 +117,7 @@ type UsageUpdatedRecord struct {
 	Status *string
 }
 
-// MeasuredFrom lists the endpoints UsageUpdatedRecord was measured from.
+// MeasuredFrom lists the endpoints UsageUpdatedRecord is returned by.
 func (UsageUpdatedRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/usages/{usage_id}",

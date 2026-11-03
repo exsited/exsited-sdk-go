@@ -42,7 +42,7 @@ type AccountCommunicationsEmailRecord struct {
 	UUID               *string
 }
 
-// MeasuredFrom lists the endpoints AccountCommunicationsEmailRecord was measured from.
+// MeasuredFrom lists the endpoints AccountCommunicationsEmailRecord is returned by.
 func (AccountCommunicationsEmailRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/communications/emails",
@@ -62,7 +62,7 @@ type AccountCommunicationsEmailList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountCommunicationsEmailList was measured from.
+// MeasuredFrom lists the endpoints AccountCommunicationsEmailList is returned by.
 func (AccountCommunicationsEmailList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/communications/emails",

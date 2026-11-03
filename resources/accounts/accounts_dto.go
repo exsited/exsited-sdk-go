@@ -152,7 +152,7 @@ type PaymentMethod struct {
 	// field name.
 	IsDefault          *bool `wire:"default"`
 	RestrictedToOrders *bool
-	// SpecifiedOrderIDs is untyped: the API sends null, and its element type is unknown.
+	// SpecifiedOrderIDs is untyped: its element type is unknown.
 	SpecifiedOrderIDs any `wire:"specified_order_ids"`
 	Processor         *PaymentProcessor
 	Reference         *string
@@ -238,7 +238,7 @@ type Pagination struct {
 	// Cursor shape.
 	HasMore    *bool
 	NextCursor *string
-	// PrevCursor is untyped: the API sends null.
+	// PrevCursor is untyped.
 	PrevCursor any
 	// Links is untyped: an object carrying a relative next URL.
 	Links *PaginationLinks
@@ -258,7 +258,7 @@ type Pagination struct {
 // AccountRecord is one account.
 type AccountRecord struct {
 	Object *string
-	// ID is the short code, "W13ZGY", and what every path takes.
+	// ID is the short code, "your-account-id", and what every path takes.
 	ID          *string
 	Name        *string
 	Status      *string
@@ -275,7 +275,7 @@ type AccountRecord struct {
 	CustomForm *CustomForm
 	// ParentAccountID can be null.
 	ParentAccountID *string
-	// ImageURL is untyped: the API sends null. Use the image endpoint.
+	// ImageURL is untyped. Use the image endpoint.
 	ImageURL any
 	// WorkflowStatus can be null.
 	WorkflowStatus           *string
@@ -378,8 +378,7 @@ type NoteFileList struct {
 
 // AccountCancelBody cancels an account.
 //
-// EffectiveDate is YYYY-MM-DD. Any other format is a 400 with code "invalid";
-// the endpoint does not parse a datetime.
+// EffectiveDate is YYYY-MM-DD; the endpoint does not parse a datetime.
 type AccountCancelBody struct {
 	EffectiveDate *string
 }
@@ -387,11 +386,10 @@ type AccountCancelBody struct {
 func (AccountCancelBody) EnvelopeKey() string { return AccountKey }
 
 // AccountInformationUpdate is flatter than the read: Currency and TimeZone go in
-// as plain strings while AccountRecord reads them back as nested objects, so
-// posting a read body back unchanged is a 400.
+// as plain strings while AccountRecord reads them back as nested objects.
 //
 // addresses and communication_preference are deliberately absent: the endpoint
-// answers 400 not_understood for both.
+// does not take them.
 type AccountInformationUpdate struct {
 	Name             *string
 	DisplayName      *string
@@ -491,8 +489,7 @@ type BillingPreferencesWrite struct {
 	InvoiceMode   *string
 	InvoiceTerm   *string
 	BillingPeriod *string
-	// BillingStartDate is an enum, not a date: "DAY_OF_MONTH" and the like. A
-	// calendar date is a 400 with code matches_invalid.
+	// BillingStartDate is an enum, not a date: "DAY_OF_MONTH" and the like.
 	BillingStartDate       *string
 	BillingStartDayOfMonth *string
 	// ChargingAndBillingAlignment is written as a boolean; it reads back as a
@@ -524,7 +521,7 @@ type AccountAddressView struct {
 	ID        *string
 }
 
-// MeasuredFrom lists the endpoints AccountAddressView was measured from.
+// MeasuredFrom lists the endpoints AccountAddressView is returned by.
 func (AccountAddressView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/addresses/{address_id}",
@@ -540,7 +537,7 @@ type AccountContactView struct {
 	ID       *string
 }
 
-// MeasuredFrom lists the endpoints AccountContactView was measured from.
+// MeasuredFrom lists the endpoints AccountContactView is returned by.
 func (AccountContactView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/contacts/{contact_type}",
@@ -558,7 +555,7 @@ type AccountCreditNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountCreditNoteList was measured from.
+// MeasuredFrom lists the endpoints AccountCreditNoteList is returned by.
 func (AccountCreditNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/credit_notes",
@@ -573,7 +570,7 @@ type AccountCustomObjectList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountCustomObjectList was measured from.
+// MeasuredFrom lists the endpoints AccountCustomObjectList is returned by.
 func (AccountCustomObjectList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/custom_objects",
@@ -585,7 +582,7 @@ type AccountInventoriesView struct {
 	Inventories []any
 }
 
-// MeasuredFrom lists the endpoints AccountInventoriesView was measured from.
+// MeasuredFrom lists the endpoints AccountInventoriesView is returned by.
 func (AccountInventoriesView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/inventories",
@@ -603,7 +600,7 @@ type AccountInvoiceList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountInvoiceList was measured from.
+// MeasuredFrom lists the endpoints AccountInvoiceList is returned by.
 func (AccountInvoiceList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/invoices",
@@ -619,7 +616,7 @@ type AccountNoteFileView struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints AccountNoteFileView was measured from.
+// MeasuredFrom lists the endpoints AccountNoteFileView is returned by.
 func (AccountNoteFileView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/notes/{note_id}/files/{file_id}",
@@ -635,7 +632,7 @@ type AccountPaymentMethodView struct {
 	PaymentMethod *PaymentMethod
 }
 
-// MeasuredFrom lists the endpoints AccountPaymentMethodView was measured from.
+// MeasuredFrom lists the endpoints AccountPaymentMethodView is returned by.
 func (AccountPaymentMethodView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/payment_methods/{payment_method_id}",
@@ -650,7 +647,7 @@ type AccountQuotePartialInvoicesView struct {
 	PartialInvoices []any
 }
 
-// MeasuredFrom lists the endpoints AccountQuotePartialInvoicesView was measured from.
+// MeasuredFrom lists the endpoints AccountQuotePartialInvoicesView is returned by.
 func (AccountQuotePartialInvoicesView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/quote_partial_invoices",
@@ -684,7 +681,7 @@ type AccountCreditNoteRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints AccountCreditNoteRecord was measured from.
+// MeasuredFrom lists the endpoints AccountCreditNoteRecord is returned by.
 func (AccountCreditNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/credit_notes",
@@ -708,7 +705,7 @@ type AccountCustomObjectRecord struct {
 	UseIn           *string
 }
 
-// MeasuredFrom lists the endpoints AccountCustomObjectRecord was measured from.
+// MeasuredFrom lists the endpoints AccountCustomObjectRecord is returned by.
 func (AccountCustomObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/custom_objects",
@@ -753,7 +750,7 @@ type AccountInvoiceRecord struct {
 	Version                   *int64
 }
 
-// MeasuredFrom lists the endpoints AccountInvoiceRecord was measured from.
+// MeasuredFrom lists the endpoints AccountInvoiceRecord is returned by.
 func (AccountInvoiceRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/invoices",
@@ -946,7 +943,7 @@ type AccountKpisRecord struct {
 	ComputedAt              *string
 }
 
-// MeasuredFrom lists the endpoints AccountKpisRecord was measured from.
+// MeasuredFrom lists the endpoints AccountKpisRecord is returned by.
 func (AccountKpisRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/kpis",
@@ -963,7 +960,7 @@ type AccountFinancialSummaryRecord struct {
 	FinancialSummary *AccountFinancialSummaryDetail
 }
 
-// MeasuredFrom lists the endpoints AccountFinancialSummaryRecord was measured from.
+// MeasuredFrom lists the endpoints AccountFinancialSummaryRecord is returned by.
 func (AccountFinancialSummaryRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/financial_summary",
@@ -992,7 +989,7 @@ type AccountCustomObjectView struct {
 	Pagination *Pagination
 }
 
-// MeasuredFrom lists the endpoints AccountCustomObjectView was measured from.
+// MeasuredFrom lists the endpoints AccountCustomObjectView is returned by.
 func (AccountCustomObjectView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/custom_objects/{custom_object_id}",
@@ -1033,7 +1030,7 @@ type AccountComponentObjectRecord struct {
 	WorkflowStatusUUID any
 }
 
-// MeasuredFrom lists the endpoints AccountComponentObjectRecord was measured from.
+// MeasuredFrom lists the endpoints AccountComponentObjectRecord is returned by.
 func (AccountComponentObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/component/{component_id}/{component_object_id}",

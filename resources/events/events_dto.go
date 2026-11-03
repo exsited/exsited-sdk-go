@@ -34,7 +34,7 @@ type EventRecord struct {
 	Status               any
 }
 
-// MeasuredFrom lists the endpoints EventRecord was measured from.
+// MeasuredFrom lists the endpoints EventRecord is returned by.
 func (EventRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/events",
@@ -54,7 +54,7 @@ type EventList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints EventList was measured from.
+// MeasuredFrom lists the endpoints EventList is returned by.
 func (EventList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/events",

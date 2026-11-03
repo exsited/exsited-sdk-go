@@ -10,7 +10,7 @@ type SettingsShippingPackageList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingPackageList was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingPackageList is returned by.
 func (SettingsShippingPackageList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_packages",
@@ -42,7 +42,7 @@ type SettingsShippingPackageRecord struct {
 	WidthUom      any
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingPackageRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingPackageRecord is returned by.
 func (SettingsShippingPackageRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_packages",

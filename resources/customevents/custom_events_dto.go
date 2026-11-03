@@ -10,7 +10,7 @@ type SettingsCustomEventList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomEventList was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomEventList is returned by.
 func (SettingsCustomEventList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_events",
@@ -33,7 +33,7 @@ type SettingsCustomEventRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomEventRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomEventRecord is returned by.
 func (SettingsCustomEventRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_events",

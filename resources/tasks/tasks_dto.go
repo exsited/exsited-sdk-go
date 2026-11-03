@@ -53,7 +53,7 @@ type TaskRecord struct {
 	Workflow         any
 }
 
-// MeasuredFrom lists the endpoints TaskRecord was measured from.
+// MeasuredFrom lists the endpoints TaskRecord is returned by.
 func (TaskRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks",
@@ -68,7 +68,7 @@ type TaskList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints TaskList was measured from.
+// MeasuredFrom lists the endpoints TaskList is returned by.
 func (TaskList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks",
@@ -80,7 +80,7 @@ type TaskChecklistReadRecord struct {
 	Checklist []Checklist
 }
 
-// MeasuredFrom lists the endpoints TaskChecklistReadRecord was measured from.
+// MeasuredFrom lists the endpoints TaskChecklistReadRecord is returned by.
 func (TaskChecklistReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks/{task_id}/checklist",
@@ -98,7 +98,7 @@ type TaskNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints TaskNoteList was measured from.
+// MeasuredFrom lists the endpoints TaskNoteList is returned by.
 func (TaskNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks/{task_code}/notes",
@@ -142,7 +142,7 @@ type TaskReadRecord struct {
 	Workflow         any
 }
 
-// MeasuredFrom lists the endpoints TaskReadRecord was measured from.
+// MeasuredFrom lists the endpoints TaskReadRecord is returned by.
 func (TaskReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks/{task_id}",
@@ -233,7 +233,7 @@ type TaskChecklistByUUIDReadRecord struct {
 	Checklist *Checklist
 }
 
-// MeasuredFrom lists the endpoints TaskChecklistByUUIDReadRecord was measured from.
+// MeasuredFrom lists the endpoints TaskChecklistByUUIDReadRecord is returned by.
 func (TaskChecklistByUUIDReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/tasks/{task_id}/checklist/{task_checklist_uuid}",

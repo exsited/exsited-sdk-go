@@ -76,6 +76,8 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/milestones"
 	"github.com/exsited/exsited-sdk-go/v4/resources/noteattachments"
 	"github.com/exsited/exsited-sdk-go/v4/resources/notegroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operatorgroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operators"
 	"github.com/exsited/exsited-sdk-go/v4/resources/orders"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisation"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisations"
@@ -112,6 +114,7 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/timesheets"
 	"github.com/exsited/exsited-sdk-go/v4/resources/uom"
 	"github.com/exsited/exsited-sdk-go/v4/resources/usages"
+	"github.com/exsited/exsited-sdk-go/v4/resources/usersettings"
 	"github.com/exsited/exsited-sdk-go/v4/resources/webhooks"
 	"github.com/exsited/exsited-sdk-go/v4/resources/workflows"
 	"github.com/exsited/exsited-sdk-go/v4/resources/zones"
@@ -293,6 +296,12 @@ type ExsitedClient struct {
 	noteGroupsOnce sync.Once
 	noteGroups     *notegroups.NoteGroups
 
+	operatorGroupsOnce sync.Once
+	operatorGroups     *operatorgroups.OperatorGroups
+
+	operatorsOnce sync.Once
+	operators     *operators.Operators
+
 	ordersOnce sync.Once
 	orders     *orders.Orders
 
@@ -400,6 +409,9 @@ type ExsitedClient struct {
 
 	usagesOnce sync.Once
 	usages     *usages.Usages
+
+	userSettingsOnce sync.Once
+	userSettings     *usersettings.UserSettings
 
 	webhooksOnce sync.Once
 	webhooks     *webhooks.Webhooks
@@ -1161,6 +1173,24 @@ func (c *ExsitedClient) NoteGroups() *notegroups.NoteGroups {
 	return c.noteGroups
 }
 
+// OperatorGroups is built and cached on first use.
+func (c *ExsitedClient) OperatorGroups() *operatorgroups.OperatorGroups {
+	c.operatorGroupsOnce.Do(func() {
+		bound, _ := NewBoundResource(c, operatorgroups.ResourceName)
+		c.operatorGroups, _ = bound.Value.(*operatorgroups.OperatorGroups)
+	})
+	return c.operatorGroups
+}
+
+// Operators is built and cached on first use.
+func (c *ExsitedClient) Operators() *operators.Operators {
+	c.operatorsOnce.Do(func() {
+		bound, _ := NewBoundResource(c, operators.ResourceName)
+		c.operators, _ = bound.Value.(*operators.Operators)
+	})
+	return c.operators
+}
+
 // Orders is built and cached on first use.
 func (c *ExsitedClient) Orders() *orders.Orders {
 	// Through the registry, so this accessor and ListResourceNames cannot disagree.
@@ -1519,6 +1549,15 @@ func (c *ExsitedClient) Usages() *usages.Usages {
 		c.usages, _ = bound.Value.(*usages.Usages)
 	})
 	return c.usages
+}
+
+// UserSettings is built and cached on first use.
+func (c *ExsitedClient) UserSettings() *usersettings.UserSettings {
+	c.userSettingsOnce.Do(func() {
+		bound, _ := NewBoundResource(c, usersettings.ResourceName)
+		c.userSettings, _ = bound.Value.(*usersettings.UserSettings)
+	})
+	return c.userSettings
 }
 
 // Webhooks is built and cached on first use.

@@ -41,7 +41,7 @@ type ItemReceiptRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints ItemReceiptRecord was measured from.
+// MeasuredFrom lists the endpoints ItemReceiptRecord is returned by.
 func (ItemReceiptRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_receipts",
@@ -60,7 +60,7 @@ type ItemReceiptList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ItemReceiptList was measured from.
+// MeasuredFrom lists the endpoints ItemReceiptList is returned by.
 func (ItemReceiptList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_receipts",
@@ -85,7 +85,7 @@ type ItemReceiptsRecord struct {
 	Version         *string
 }
 
-// MeasuredFrom lists the endpoints ItemReceiptsRecord was measured from.
+// MeasuredFrom lists the endpoints ItemReceiptsRecord is returned by.
 func (ItemReceiptsRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/item_receipts",
@@ -121,7 +121,7 @@ type ItemReceiptUpdatedRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints ItemReceiptUpdatedRecord was measured from.
+// MeasuredFrom lists the endpoints ItemReceiptUpdatedRecord is returned by.
 func (ItemReceiptUpdatedRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/item_receipts/{item_receipt_id}",
@@ -137,7 +137,7 @@ type PurchaseOrderItemReceiptsRecord struct {
 	Pagination   map[string]any
 }
 
-// MeasuredFrom lists the endpoints PurchaseOrderItemReceiptsRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseOrderItemReceiptsRecord is returned by.
 func (PurchaseOrderItemReceiptsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_orders/{purchase_order_id}/item_receipts",

@@ -38,7 +38,7 @@ type PurchaseExpressRecord struct {
 	Warehouse              any
 }
 
-// MeasuredFrom lists the endpoints PurchaseExpressRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseExpressRecord is returned by.
 func (PurchaseExpressRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/purchase_express",

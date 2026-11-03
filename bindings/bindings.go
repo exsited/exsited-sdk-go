@@ -3,4 +3,4 @@ package bindings
 
 // Registered is the number of families the client registers, one per package under
 // resources/; client.RegisteredResourceNames lists them.
-const Registered = 91
+const Registered = 94

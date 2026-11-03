@@ -53,7 +53,7 @@ type PurchaseCreditNoteRecord struct {
 	Version any
 }
 
-// MeasuredFrom lists the endpoints PurchaseCreditNoteRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseCreditNoteRecord is returned by.
 func (PurchaseCreditNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_credit_notes",
@@ -68,7 +68,7 @@ type PurchaseCreditNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseCreditNoteList was measured from.
+// MeasuredFrom lists the endpoints PurchaseCreditNoteList is returned by.
 func (PurchaseCreditNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_credit_notes",
@@ -98,7 +98,7 @@ type PurchaseCreditNoteReadRecord struct {
 	Version                *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseCreditNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseCreditNoteReadRecord is returned by.
 func (PurchaseCreditNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_credit_notes/{purchase_credit_note_id}",
@@ -118,7 +118,7 @@ type PurchaseCreditNoteUpdateRecord struct {
 	Version *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseCreditNoteUpdateRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseCreditNoteUpdateRecord is returned by.
 func (PurchaseCreditNoteUpdateRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/purchase_credit_notes/{purchase_credit_note_id}",
@@ -237,7 +237,7 @@ type PurchaseCreditNoteCreatedRecord struct {
 	Version         *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseCreditNoteCreatedRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseCreditNoteCreatedRecord is returned by.
 func (PurchaseCreditNoteCreatedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/purchase_credit_notes",

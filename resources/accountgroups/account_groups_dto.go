@@ -10,7 +10,7 @@ type SettingsAccountGroupList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsAccountGroupList was measured from.
+// MeasuredFrom lists the endpoints SettingsAccountGroupList is returned by.
 func (SettingsAccountGroupList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/account_groups",
@@ -34,7 +34,7 @@ type SettingsAccountGroupRecord struct {
 	Status              *string
 }
 
-// MeasuredFrom lists the endpoints SettingsAccountGroupRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsAccountGroupRecord is returned by.
 func (SettingsAccountGroupRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/account_groups",

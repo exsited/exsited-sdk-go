@@ -42,7 +42,7 @@ type ComponentRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints ComponentRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentRecord is returned by.
 func (ComponentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/component",
@@ -61,7 +61,7 @@ type ComponentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentList was measured from.
+// MeasuredFrom lists the endpoints ComponentList is returned by.
 func (ComponentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/component",
@@ -89,7 +89,7 @@ type ComponentByUuidRecord struct {
 	Version         *string
 }
 
-// MeasuredFrom lists the endpoints ComponentByUuidRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentByUuidRecord is returned by.
 func (ComponentByUuidRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/component/{component_uuid}",
@@ -127,7 +127,7 @@ type ComponentObjectRecord struct {
 	WorkflowStatusUUID any
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectRecord is returned by.
 func (ComponentObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}",
@@ -145,7 +145,7 @@ type ComponentObjectsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectsRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectsRecord is returned by.
 func (ComponentObjectsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects",
@@ -161,7 +161,7 @@ type ComponentObjectActivityRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectActivityRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectActivityRecord is returned by.
 func (ComponentObjectActivityRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -177,7 +177,7 @@ type ComponentObjectCustomObjectsRecord struct {
 	URL           *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectCustomObjectsRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectCustomObjectsRecord is returned by.
 func (ComponentObjectCustomObjectsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/custom_objects",
@@ -410,7 +410,7 @@ type ComponentObjectRecordView struct {
 	LastUpdatedOn      *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectRecordView was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectRecordView is returned by.
 func (ComponentObjectRecordView) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/components/{component_uuid}/objects",
@@ -467,7 +467,7 @@ type ComponentObjectActivityEntryRecord struct {
 	Version   *int64
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectActivityEntryRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectActivityEntryRecord is returned by.
 func (ComponentObjectActivityEntryRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -488,7 +488,7 @@ type ComponentObjectNotesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectNotesRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectNotesRecord is returned by.
 func (ComponentObjectNotesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes",
@@ -513,7 +513,7 @@ type ComponentObjectNoteRecord struct {
 	Watchers              []any
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectNoteRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectNoteRecord is returned by.
 func (ComponentObjectNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes",
@@ -566,7 +566,7 @@ type ComponentObjectNoteFilesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectNoteFilesRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectNoteFilesRecord is returned by.
 func (ComponentObjectNoteFilesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes/{note_id}/files",
@@ -582,7 +582,7 @@ type ComponentObjectNoteFileRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints ComponentObjectNoteFileRecord was measured from.
+// MeasuredFrom lists the endpoints ComponentObjectNoteFileRecord is returned by.
 func (ComponentObjectNoteFileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes/{note_id}/files/{file_id}",

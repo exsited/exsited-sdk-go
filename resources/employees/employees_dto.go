@@ -43,7 +43,7 @@ type EmployeeRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints EmployeeRecord was measured from.
+// MeasuredFrom lists the endpoints EmployeeRecord is returned by.
 func (EmployeeRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/employees",
@@ -64,7 +64,7 @@ type EmployeeList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints EmployeeList was measured from.
+// MeasuredFrom lists the endpoints EmployeeList is returned by.
 func (EmployeeList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/employees",

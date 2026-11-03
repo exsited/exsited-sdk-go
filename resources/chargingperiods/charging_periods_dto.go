@@ -10,7 +10,7 @@ type SettingsChargingPeriodList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsChargingPeriodList was measured from.
+// MeasuredFrom lists the endpoints SettingsChargingPeriodList is returned by.
 func (SettingsChargingPeriodList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/charging_periods",
@@ -33,7 +33,7 @@ type SettingsChargingPeriodRecord struct {
 	TimePeriod    *SettingsChargingPeriodTimePeriod
 }
 
-// MeasuredFrom lists the endpoints SettingsChargingPeriodRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsChargingPeriodRecord is returned by.
 func (SettingsChargingPeriodRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/charging_periods",

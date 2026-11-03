@@ -60,8 +60,8 @@ var FilterableFields = map[string]bool{
 	"last_updated_by": true, "version": true,
 }
 
-// DeprecatedFilters are the fields documented as filter_<field> that the API
-// rejects with 400 "Filter syntax deprecated bracket". Each lives inside a nested
+// DeprecatedFilters are the fields documented as filter_<field> that are not
+// accepted as such. Each lives inside a nested
 // block and is reachable through the filter expression instead.
 var DeprecatedFilters = map[string]bool{
 	"item_number": true, "upc_code": true,

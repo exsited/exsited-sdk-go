@@ -65,7 +65,7 @@ type BookingRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints BookingRecord was measured from.
+// MeasuredFrom lists the endpoints BookingRecord is returned by.
 func (BookingRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking",
@@ -80,7 +80,7 @@ type BookingList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints BookingList was measured from.
+// MeasuredFrom lists the endpoints BookingList is returned by.
 func (BookingList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking",
@@ -137,7 +137,7 @@ type BookingByIdRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints BookingByIdRecord was measured from.
+// MeasuredFrom lists the endpoints BookingByIdRecord is returned by.
 func (BookingByIdRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}",
@@ -452,7 +452,7 @@ type BookingNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints BookingNoteList was measured from.
+// MeasuredFrom lists the endpoints BookingNoteList is returned by.
 func (BookingNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/notes",
@@ -510,7 +510,7 @@ type BookingBillingPreferencesView struct {
 	Object             *string
 }
 
-// MeasuredFrom lists the endpoints BookingBillingPreferencesView was measured from.
+// MeasuredFrom lists the endpoints BookingBillingPreferencesView is returned by.
 func (BookingBillingPreferencesView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/billing_preferences",
@@ -573,7 +573,7 @@ type BookingLineRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints BookingLineRecord was measured from.
+// MeasuredFrom lists the endpoints BookingLineRecord is returned by.
 func (BookingLineRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/lines/{line_uuid}",
@@ -662,7 +662,7 @@ type BookingCustomObjectList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints BookingCustomObjectList was measured from.
+// MeasuredFrom lists the endpoints BookingCustomObjectList is returned by.
 func (BookingCustomObjectList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/custom_objects",
@@ -707,7 +707,7 @@ type BookingCustomObjectRecord struct {
 	UseIn           *string
 }
 
-// MeasuredFrom lists the endpoints BookingCustomObjectRecord was measured from.
+// MeasuredFrom lists the endpoints BookingCustomObjectRecord is returned by.
 func (BookingCustomObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/custom_objects/{custom_object_id}",
@@ -726,7 +726,7 @@ type BookingInvoiceList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints BookingInvoiceList was measured from.
+// MeasuredFrom lists the endpoints BookingInvoiceList is returned by.
 func (BookingInvoiceList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/invoices",
@@ -835,7 +835,7 @@ type BookingItemFulfillmentRecord struct {
 	Version              *int64
 }
 
-// MeasuredFrom lists the endpoints BookingItemFulfillmentRecord was measured from.
+// MeasuredFrom lists the endpoints BookingItemFulfillmentRecord is returned by.
 func (BookingItemFulfillmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/item_fulfillments/{fulfillment_id}",
@@ -918,7 +918,7 @@ type BookingKpisRecord struct {
 	TotalRevenue            *string
 }
 
-// MeasuredFrom lists the endpoints BookingKpisRecord was measured from.
+// MeasuredFrom lists the endpoints BookingKpisRecord is returned by.
 func (BookingKpisRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/kpis",
@@ -933,7 +933,7 @@ type BookingPaymentMethodsRecord struct {
 	PaymentMethods []BookingPaymentMethodsPaymentMethod
 }
 
-// MeasuredFrom lists the endpoints BookingPaymentMethodsRecord was measured from.
+// MeasuredFrom lists the endpoints BookingPaymentMethodsRecord is returned by.
 func (BookingPaymentMethodsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/payment_methods",
@@ -977,7 +977,7 @@ type BookingPaymentMethodRecord struct {
 	PaymentMethod *BookingPaymentMethodPaymentMethod
 }
 
-// MeasuredFrom lists the endpoints BookingPaymentMethodRecord was measured from.
+// MeasuredFrom lists the endpoints BookingPaymentMethodRecord is returned by.
 func (BookingPaymentMethodRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/payment_methods/{payment_method_ref}",
@@ -1023,7 +1023,7 @@ type BookingPaymentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints BookingPaymentList was measured from.
+// MeasuredFrom lists the endpoints BookingPaymentList is returned by.
 func (BookingPaymentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/payments",
@@ -1104,7 +1104,7 @@ type BookingPaymentView struct {
 	Version                *int64
 }
 
-// MeasuredFrom lists the endpoints BookingPaymentView was measured from.
+// MeasuredFrom lists the endpoints BookingPaymentView is returned by.
 func (BookingPaymentView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/payments/{payment_id}",
@@ -1152,7 +1152,7 @@ type BookingPdfRecord struct {
 	PDF *BookingPdfPdf
 }
 
-// MeasuredFrom lists the endpoints BookingPdfRecord was measured from.
+// MeasuredFrom lists the endpoints BookingPdfRecord is returned by.
 func (BookingPdfRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/pdf",
@@ -1176,7 +1176,7 @@ type BookingQuotePartialInvoicesRecord struct {
 	PartialInvoices []any
 }
 
-// MeasuredFrom lists the endpoints BookingQuotePartialInvoicesRecord was measured from.
+// MeasuredFrom lists the endpoints BookingQuotePartialInvoicesRecord is returned by.
 func (BookingQuotePartialInvoicesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/booking/{booking_id}/quote_partial_invoices",

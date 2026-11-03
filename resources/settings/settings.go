@@ -700,7 +700,9 @@ func (s *Settings) GetSettingsFieldSetting(ctx context.Context, fieldSettingID a
 		RaiseOnError: raiseOnError, ResponseFormat: format, DTOShape: SettingsFieldSettingReadRecordShape})
 }
 
-// GetSettingsGeneralSettings sends GET /api/{api_version}/settings/general_settings/{group}.
+// GetSettingsGeneralSettings sends GET /api/{api_version}/settings/general_settings/{group}, under
+// general_settings; group is one of account, dashboard, date_and_time, display, general, item,
+// labour, order, portal, purchase, security and transaction, any case.
 func (s *Settings) GetSettingsGeneralSettings(ctx context.Context, group any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requireValue(group, "group"); err != nil {
 		return nil, err

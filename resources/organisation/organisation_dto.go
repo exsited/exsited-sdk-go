@@ -40,7 +40,7 @@ type SettingsOrganisationRecord struct {
 	Website            any
 }
 
-// MeasuredFrom lists the endpoints SettingsOrganisationRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsOrganisationRecord is returned by.
 func (SettingsOrganisationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/organisation",

@@ -28,7 +28,7 @@ type AlertsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AlertsRecord was measured from.
+// MeasuredFrom lists the endpoints AlertsRecord is returned by.
 func (AlertsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/alerts",
@@ -44,7 +44,7 @@ type AlertsEmployeeByIDList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AlertsEmployeeByIDList was measured from.
+// MeasuredFrom lists the endpoints AlertsEmployeeByIDList is returned by.
 func (AlertsEmployeeByIDList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/alerts/employee/{employee_id}",
@@ -59,7 +59,7 @@ type AlertsLabourByIDList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AlertsLabourByIDList was measured from.
+// MeasuredFrom lists the endpoints AlertsLabourByIDList is returned by.
 func (AlertsLabourByIDList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/alerts/labour/{labour_id}",

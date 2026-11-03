@@ -82,7 +82,7 @@ type VariationOption struct {
 }
 
 // PackageDetail is one package on an item. LastUpdatedBy and LastUpdatedOn are
-// always null, so both are untyped.
+// untyped.
 type PackageDetail struct {
 	Object           *string
 	ID               *string
@@ -132,8 +132,8 @@ type SaleCharge struct {
 // SaleBlock is an item's sale configuration.
 //
 // Named ...Block rather than ItemSale because Go gives a package one namespace and
-// ItemSale is already the path constant in urls.go. The fields always sent as null
-// stay untyped. DefaultSalePrice is a float or null.
+// ItemSale is already the path constant in urls.go. Fields without a known
+// type stay untyped. DefaultSalePrice is a float or null.
 type SaleBlock struct {
 	Enabled           *bool
 	EnableBackOrder   *bool
@@ -163,7 +163,7 @@ type SaleBlock struct {
 }
 
 // PurchaseBlock is an item's purchase configuration. AccountingCode and
-// PricingProfile are always null.
+// PricingProfile are untyped.
 type PurchaseBlock struct {
 	Enabled                   *bool
 	SupplierManagementEnabled *bool
@@ -202,9 +202,8 @@ type InventoryProperties struct {
 //
 // The quantities are numbers here, whole except quantity_available and
 // quantity_promised, and each has a _value twin that is a string:
-// quantity_on_hand: 79999 beside quantity_on_hand_value: "0.00". The same names on
-// an InventoryAdjustment are strings instead. Nothing is coerced either way.
-// Warehouse and UOM are always null.
+// The same names on an InventoryAdjustment are strings instead. Nothing is coerced
+// either way. Warehouse and UOM are untyped.
 type WarehouseInventory struct {
 	QuantityOnHand           *int64
 	QuantityOnHandValue      *string
@@ -240,7 +239,7 @@ type NoteAttachment struct {
 }
 
 // NoteRecord is one note on an item. Group, UserField, LastUpdatedBy and
-// LastUpdatedOn are always null.
+// LastUpdatedOn are untyped.
 type NoteRecord struct {
 	Object        *string
 	ID            *string
@@ -267,8 +266,8 @@ func (NoteRecord) EnvelopeKey() string { return NoteKey }
 // sale, purchase and inventories stubs answer an integer id instead, so they have
 // types of their own.
 //
-// BaseUOM and ImageURL are always null and are untyped. UOMs and ActivityLogs are
-// always empty, so their element types are unknown.
+// BaseUOM and ImageURL are untyped. UOMs and ActivityLogs have no known element
+// type.
 //
 // The sub-resource fields arrive only on the endpoint that asks for them. On a
 // plain listing they are absent, not null.
@@ -297,7 +296,7 @@ type ItemRecord struct {
 
 	CustomForm *CustomForm
 	Manager    *Reference
-	// Group is nearly always null.
+	// Group can be null.
 	Group *Reference
 
 	CreatedOn *string
@@ -319,12 +318,12 @@ type ItemRecord struct {
 	UseVariations       []VariationOption
 	CustomObjects       []any
 
-	// Always empty.
+	// Element type is unknown.
 	UOMs             []any `wire:"uoms"`
 	CustomAttributes []CustomAttribute
 	ActivityLogs     []any
 
-	// Always null.
+	// Untyped.
 	BaseUOM  any
 	ImageURL any
 }
@@ -353,7 +352,7 @@ type Pagination struct {
 	Limit      *int64
 	HasMore    *bool
 	NextCursor *string
-	// PrevCursor is untyped: the API sends null.
+	// PrevCursor is untyped.
 	PrevCursor any
 	// Links is untyped: an object carrying a relative next URL.
 	Links *PaginationLinks
@@ -394,9 +393,9 @@ func (ItemInventoriesView) EnvelopeKey() string { return ItemKey }
 
 // InventoryAdjustment is one inventory movement.
 //
-// Every quantity is a string here, "79999", not 79999: the opposite of
+// Every quantity is a string here, not a number: the opposite of
 // WarehouseInventory, where the same names are integers. CreatedBy and
-// LastUpdatedBy are always null.
+// LastUpdatedBy are untyped.
 type InventoryAdjustment struct {
 	Object                   *string
 	ID                       *string
@@ -458,8 +457,6 @@ type NoteFileList struct {
 // "FAMILY" or "VARIATION_BASED".
 //
 // The family flags are written is_parent/is_child and read back as parent/child.
-//
-// Group rejects an unknown value with 400 internal_error "Invalid group".
 //
 // The nested blocks are `any` rather than the read types: the write shapes differ
 // from the read shapes and are not established.
@@ -527,8 +524,7 @@ func (ItemPurchaseWrite) EnvelopeKey() string { return ItemKey }
 
 // ItemInventoriesWrite is {"item": {"inventories": {...}}}.
 //
-// Turning inventory off is refused with 400 "Unable to disable Inventory
-// Management" once stock exists. The write spells warehouse management
+// The write spells warehouse management
 // warehouse_enabled where the read returns enable_warehouse_management.
 type ItemInventoriesWrite struct {
 	Inventories any
@@ -600,7 +596,7 @@ type ItemNoteFileView struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints ItemNoteFileView was measured from.
+// MeasuredFrom lists the endpoints ItemNoteFileView is returned by.
 func (ItemNoteFileView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/items/{item_id}/notes/{note_id}/files/{file_id}",

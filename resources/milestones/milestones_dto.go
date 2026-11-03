@@ -28,7 +28,7 @@ type MilestonesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints MilestonesRecord was measured from.
+// MeasuredFrom lists the endpoints MilestonesRecord is returned by.
 func (MilestonesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/milestones",
@@ -44,7 +44,7 @@ type MilestonesLabourByIDList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints MilestonesLabourByIDList was measured from.
+// MeasuredFrom lists the endpoints MilestonesLabourByIDList is returned by.
 func (MilestonesLabourByIDList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/milestones/labour/{labour_id}",

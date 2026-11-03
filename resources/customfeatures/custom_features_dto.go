@@ -26,7 +26,7 @@ type CustomFeatureRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints CustomFeatureRecord was measured from.
+// MeasuredFrom lists the endpoints CustomFeatureRecord is returned by.
 func (CustomFeatureRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/custom_feature",
@@ -86,7 +86,7 @@ type CustomFeatureList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints CustomFeatureList was measured from.
+// MeasuredFrom lists the endpoints CustomFeatureList is returned by.
 func (CustomFeatureList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_feature",

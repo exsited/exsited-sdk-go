@@ -28,7 +28,7 @@ type IntegrationConnectionsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints IntegrationConnectionsRecord was measured from.
+// MeasuredFrom lists the endpoints IntegrationConnectionsRecord is returned by.
 func (IntegrationConnectionsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/integration_connections",

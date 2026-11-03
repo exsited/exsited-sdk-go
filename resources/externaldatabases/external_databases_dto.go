@@ -31,7 +31,7 @@ type ExternalDatabasesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabasesRecord was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabasesRecord is returned by.
 func (ExternalDatabasesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/external_databases",
@@ -46,7 +46,7 @@ type ExternalDatabaseCreateRecord struct {
 	Name         *string
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabaseCreateRecord was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabaseCreateRecord is returned by.
 func (ExternalDatabaseCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/external_databases",
@@ -63,7 +63,7 @@ type ExternalDatabaseInsertRecordCreateRecord struct {
 	Success      *bool
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabaseInsertRecordCreateRecord was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabaseInsertRecordCreateRecord is returned by.
 func (ExternalDatabaseInsertRecordCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/external_databases/{db_name}/insert_records",
@@ -82,7 +82,7 @@ type ExternalDatabaseSearchCreateRecord struct {
 	Success *bool
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabaseSearchCreateRecord was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabaseSearchCreateRecord is returned by.
 func (ExternalDatabaseSearchCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/external_databases/{db_name}/search",
@@ -100,7 +100,7 @@ type ExternalDatabaseTableList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabaseTableList was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabaseTableList is returned by.
 func (ExternalDatabaseTableList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/external_databases/{db_name}/tables/{table_name}",
@@ -112,7 +112,7 @@ type ExternalDatabaseUpdateRecordsUpdateRecord struct {
 	Message *string
 }
 
-// MeasuredFrom lists the endpoints ExternalDatabaseUpdateRecordsUpdateRecord was measured from.
+// MeasuredFrom lists the endpoints ExternalDatabaseUpdateRecordsUpdateRecord is returned by.
 func (ExternalDatabaseUpdateRecordsUpdateRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/external_databases/{db_name}/update_records",

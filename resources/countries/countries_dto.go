@@ -10,7 +10,7 @@ type SettingsCountryList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCountryList was measured from.
+// MeasuredFrom lists the endpoints SettingsCountryList is returned by.
 func (SettingsCountryList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/countries",
@@ -38,7 +38,7 @@ type SettingsCountryRecord struct {
 	Status          *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCountryRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCountryRecord is returned by.
 func (SettingsCountryRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/countries",

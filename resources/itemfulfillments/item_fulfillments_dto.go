@@ -53,7 +53,7 @@ type ItemFulfillmentRecord struct {
 	Version any
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentRecord is returned by.
 func (ItemFulfillmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_fulfillments",
@@ -68,7 +68,7 @@ type ItemFulfillmentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentList was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentList is returned by.
 func (ItemFulfillmentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_fulfillments",
@@ -100,7 +100,7 @@ type ItemFulfillmentReadRecord struct {
 	Version              *int64
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentReadRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentReadRecord is returned by.
 func (ItemFulfillmentReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/item_fulfillments",
@@ -127,7 +127,7 @@ type ItemFulfillmentsRecord struct {
 	Version           *int64
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentsRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentsRecord is returned by.
 func (ItemFulfillmentsRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/item_fulfillments",
@@ -148,7 +148,7 @@ type ItemFulfillmentUpdatedRecord struct {
 	Version *int64
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentUpdatedRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentUpdatedRecord is returned by.
 func (ItemFulfillmentUpdatedRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/item_fulfillments/{fulfillment_id}",
@@ -166,7 +166,7 @@ type ItemFulfillmentNoteCreateRecord struct {
 	Object          *string
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentNoteCreateRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentNoteCreateRecord is returned by.
 func (ItemFulfillmentNoteCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/item_fulfillments/{fulfillment_id}/notes",
@@ -271,7 +271,7 @@ type ItemFulfillmentNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentNoteList was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentNoteList is returned by.
 func (ItemFulfillmentNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_fulfillments/{fulfillment_id}/notes",
@@ -332,7 +332,7 @@ type ItemFulfillmentNoteReadRecord struct {
 	Note *ItemFulfillmentNote
 }
 
-// MeasuredFrom lists the endpoints ItemFulfillmentNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints ItemFulfillmentNoteReadRecord is returned by.
 func (ItemFulfillmentNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/item_fulfillments/{fulfillment_id}/notes/{note_id}",

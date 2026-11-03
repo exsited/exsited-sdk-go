@@ -40,7 +40,7 @@ type PaymentRecord struct {
 	Version                *int64
 }
 
-// MeasuredFrom lists the endpoints PaymentRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentRecord is returned by.
 func (PaymentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/payments",
@@ -57,7 +57,7 @@ type PaymentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PaymentList was measured from.
+// MeasuredFrom lists the endpoints PaymentList is returned by.
 func (PaymentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/payments",
@@ -84,7 +84,7 @@ type PaymentNoteRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints PaymentNoteRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentNoteRecord is returned by.
 func (PaymentNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/{payment_id}/notes",
@@ -99,7 +99,7 @@ type PaymentNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PaymentNoteList was measured from.
+// MeasuredFrom lists the endpoints PaymentNoteList is returned by.
 func (PaymentNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/{payment_id}/notes",
@@ -123,7 +123,7 @@ type PaymentsNoteRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints PaymentsNoteRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentsNoteRecord is returned by.
 func (PaymentsNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/notes",
@@ -138,7 +138,7 @@ type PaymentsNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PaymentsNoteList was measured from.
+// MeasuredFrom lists the endpoints PaymentsNoteList is returned by.
 func (PaymentsNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/notes",
@@ -167,7 +167,7 @@ type PaymentReadRecord struct {
 	Version                *int64
 }
 
-// MeasuredFrom lists the endpoints PaymentReadRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentReadRecord is returned by.
 func (PaymentReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/{payment_id}",
@@ -186,7 +186,7 @@ type AccountPaymentsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountPaymentsRecord was measured from.
+// MeasuredFrom lists the endpoints AccountPaymentsRecord is returned by.
 func (AccountPaymentsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/payments",
@@ -212,7 +212,7 @@ type PaymentNoteReadRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints PaymentNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentNoteReadRecord is returned by.
 func (PaymentNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/{payment_id}/notes/{payment_note_id}",
@@ -232,7 +232,7 @@ type PaymentNoteFileReadRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints PaymentNoteFileReadRecord was measured from.
+// MeasuredFrom lists the endpoints PaymentNoteFileReadRecord is returned by.
 func (PaymentNoteFileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/payments/{payment_id}/notes/{payment_note_id}/files/{payment_file_id}",

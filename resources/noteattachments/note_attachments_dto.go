@@ -12,7 +12,7 @@ type NoteAttachmentRecord struct {
 	Size   *int64
 }
 
-// MeasuredFrom lists the endpoints NoteAttachmentRecord was measured from.
+// MeasuredFrom lists the endpoints NoteAttachmentRecord is returned by.
 func (NoteAttachmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/note_attachment/{attachment_uuid}",

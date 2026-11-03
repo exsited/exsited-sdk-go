@@ -57,7 +57,7 @@ type CreditNoteRecord struct {
 	Version any
 }
 
-// MeasuredFrom lists the endpoints CreditNoteRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteRecord is returned by.
 func (CreditNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes",
@@ -72,7 +72,7 @@ type CreditNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints CreditNoteList was measured from.
+// MeasuredFrom lists the endpoints CreditNoteList is returned by.
 func (CreditNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes",
@@ -103,7 +103,7 @@ type CreditNoteReadRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints CreditNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteReadRecord is returned by.
 func (CreditNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes/{credit_note_id}",
@@ -125,7 +125,7 @@ type CreditNoteUpdateRecord struct {
 	Version    *int64
 }
 
-// MeasuredFrom lists the endpoints CreditNoteUpdateRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteUpdateRecord is returned by.
 func (CreditNoteUpdateRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/credit_notes/{credit_note_id}",
@@ -211,7 +211,7 @@ type CreditNoteItemsRecord struct {
 	Object *string
 }
 
-// MeasuredFrom lists the endpoints CreditNoteItemsRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteItemsRecord is returned by.
 func (CreditNoteItemsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes/{credit_note_id}/items",
@@ -247,7 +247,7 @@ type CreditNoteApplicationsRecord struct {
 	Object       *string
 }
 
-// MeasuredFrom lists the endpoints CreditNoteApplicationsRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteApplicationsRecord is returned by.
 func (CreditNoteApplicationsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes/{credit_note_id}/credit_note_applications",
@@ -265,7 +265,7 @@ type CreditNoteNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints CreditNoteNoteList was measured from.
+// MeasuredFrom lists the endpoints CreditNoteNoteList is returned by.
 func (CreditNoteNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes/{credit_note_id}/notes",
@@ -290,7 +290,7 @@ type CreditNoteNoteRecord struct {
 	Watchers      []any
 }
 
-// MeasuredFrom lists the endpoints CreditNoteNoteRecord was measured from.
+// MeasuredFrom lists the endpoints CreditNoteNoteRecord is returned by.
 func (CreditNoteNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/credit_notes/{credit_note_id}/notes",

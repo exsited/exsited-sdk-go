@@ -50,7 +50,7 @@ type CustomAttributeRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints CustomAttributeRecord was measured from.
+// MeasuredFrom lists the endpoints CustomAttributeRecord is returned by.
 func (CustomAttributeRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_attributes",
@@ -70,7 +70,7 @@ type CustomAttributeList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints CustomAttributeList was measured from.
+// MeasuredFrom lists the endpoints CustomAttributeList is returned by.
 func (CustomAttributeList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_attributes",
@@ -109,7 +109,7 @@ type CustomAttributesRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints CustomAttributesRecord was measured from.
+// MeasuredFrom lists the endpoints CustomAttributesRecord is returned by.
 func (CustomAttributesRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/custom_attributes",

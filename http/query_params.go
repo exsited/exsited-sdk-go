@@ -132,8 +132,6 @@ func isoTime(t time.Time) string {
 
 // FilterOperators are the suffixes a filter name can carry, the union of v4's four per-type lists;
 // "eq" is the absence of a suffix, never a literal _eq.
-//
-// starts_with is a name the Text list advertises, but the API answers it with 200 and no rows.
 var FilterOperators = []string{
 	"eq", "neq", "in", "nin", "contains", "not_contains", "starts_with",
 	"gt", "gte", "lt", "lte", "has_value", "does_not_have_value",
@@ -153,7 +151,7 @@ const (
 
 // FilterParam builds one filter's parameter name, filter_<field> or filter_<field>_<operator>.
 //
-// Only the operator's existence is checked: the API answers a wrong type for it with a better 400.
+// Only the operator's existence is checked.
 func FilterParam(field string, operator ...string) (string, error) {
 	if strings.TrimSpace(field) == "" {
 		return "", exerrors.UsageErrorf("filter field: expected a name like 'status', got %q", field)
@@ -191,7 +189,7 @@ func MustFilterParam(field string, operator ...string) string {
 
 // FilterValues renders an "in" or "nin" value: comma separated in one key, as v4 splits it.
 //
-// A slice would repeat the key, which v4 answers 200 with no rows; a member holding a comma or an empty list is refused.
+// A slice would repeat the key; a member holding a comma or an empty list is refused.
 func FilterValues(values ...any) (string, error) {
 	rendered := make([]string, 0, len(values))
 	for _, value := range values {
@@ -233,7 +231,7 @@ func MustFilterValues(values ...any) string {
 }
 
 // SortParam builds a `sort` value, "-" prefixed to descend, for Account, Accounting Codes, Alert,
-// Integration Connections and Inventory Adjustments; the wrong spelling is ignored with a 200.
+// Integration Connections and Inventory Adjustments.
 func SortParam(field string, direction ...SortDirection) (string, error) {
 	if strings.TrimSpace(field) == "" {
 		return "", exerrors.UsageErrorf("sort field: expected a name like 'created_on', got %q", field)

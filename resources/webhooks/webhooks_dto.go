@@ -1,5 +1,5 @@
 package webhooks
 
-// This family has no typed views: no webhook id was readable, so no body is known.
+// This family has no typed views.
 //
 // Every endpoint here answers ApiResponse.Map and leaves ApiResponse.DTO() nil.

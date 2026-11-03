@@ -10,7 +10,7 @@ type SettingsReceiveTermList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsReceiveTermList was measured from.
+// MeasuredFrom lists the endpoints SettingsReceiveTermList is returned by.
 func (SettingsReceiveTermList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/receive_terms",
@@ -34,7 +34,7 @@ type SettingsReceiveTermRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsReceiveTermRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsReceiveTermRecord is returned by.
 func (SettingsReceiveTermRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/receive_terms",

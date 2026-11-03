@@ -10,7 +10,7 @@ type QuoteOrderInvoiceList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints QuoteOrderInvoiceList was measured from.
+// MeasuredFrom lists the endpoints QuoteOrderInvoiceList is returned by.
 func (QuoteOrderInvoiceList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/quote_orders/{quote_order_id}/invoices",

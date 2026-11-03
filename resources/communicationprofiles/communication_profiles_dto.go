@@ -11,7 +11,7 @@ type SettingsCommunicationProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCommunicationProfileList was measured from.
+// MeasuredFrom lists the endpoints SettingsCommunicationProfileList is returned by.
 func (SettingsCommunicationProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/communication_profiles",
@@ -34,7 +34,7 @@ type SettingsCommunicationProfileRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCommunicationProfileRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCommunicationProfileRecord is returned by.
 func (SettingsCommunicationProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/communication_profiles",

@@ -10,7 +10,7 @@ type SettingsApprovalUserGroupList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsApprovalUserGroupList was measured from.
+// MeasuredFrom lists the endpoints SettingsApprovalUserGroupList is returned by.
 func (SettingsApprovalUserGroupList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/approval_user_groups",
@@ -33,7 +33,7 @@ type SettingsApprovalUserGroupRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsApprovalUserGroupRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsApprovalUserGroupRecord is returned by.
 func (SettingsApprovalUserGroupRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/approval_user_groups",

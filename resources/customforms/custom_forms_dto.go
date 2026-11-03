@@ -10,7 +10,7 @@ type SettingsCustomFormList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomFormList was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomFormList is returned by.
 func (SettingsCustomFormList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_forms",
@@ -34,7 +34,7 @@ type SettingsCustomFormRecord struct {
 	Status             *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomFormRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomFormRecord is returned by.
 func (SettingsCustomFormRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_forms",

@@ -45,7 +45,7 @@ type InventoryAdjustmentRecord struct {
 	WarehouseName            *string
 }
 
-// MeasuredFrom lists the endpoints InventoryAdjustmentRecord was measured from.
+// MeasuredFrom lists the endpoints InventoryAdjustmentRecord is returned by.
 func (InventoryAdjustmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/inventory_adjustments",
@@ -65,7 +65,7 @@ type InventoryAdjustmentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints InventoryAdjustmentList was measured from.
+// MeasuredFrom lists the endpoints InventoryAdjustmentList is returned by.
 func (InventoryAdjustmentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/inventory_adjustments",

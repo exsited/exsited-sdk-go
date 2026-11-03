@@ -29,8 +29,7 @@ func (w *Workflows) DeleteMilestone(ctx context.Context, milestoneUUID any, rais
 		ResponseFormat: format})
 }
 
-// UpdateWorkflowComponentByID sends PATCH /api/{api_version}/workflow/component/{cc_id}. v4 answers this
-// path 405; the documented route takes two slots where this path has one, and no body is verified.
+// UpdateWorkflowComponentByID sends PATCH /api/{api_version}/workflow/component/{cc_id}.
 func (w *Workflows) UpdateWorkflowComponentByID(ctx context.Context, ccID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requireValue(ccID, "cc_id"); err != nil {
 		return nil, err
@@ -62,9 +61,7 @@ func (w *Workflows) GetWorkflowMilestones(ctx context.Context, workflowUUID any,
 		DTOShape: WorkflowMilestoneListShape})
 }
 
-// CreateWorkflowComponentCcMilestone sends POST /api/{api_version}/workflow/component/{cc_id}/milestone. v4
-// answers this path 405; the documented route takes two slots where this path has one, and no body is
-// verified.
+// CreateWorkflowComponentCcMilestone sends POST /api/{api_version}/workflow/component/{cc_id}/milestone.
 func (w *Workflows) CreateWorkflowComponentCcMilestone(ctx context.Context, ccID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requireValue(ccID, "cc_id"); err != nil {
 		return nil, err

@@ -65,7 +65,7 @@ type OrderRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints OrderRecord was measured from.
+// MeasuredFrom lists the endpoints OrderRecord is returned by.
 func (OrderRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders",
@@ -80,7 +80,7 @@ type OrderList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints OrderList was measured from.
+// MeasuredFrom lists the endpoints OrderList is returned by.
 func (OrderList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders",
@@ -105,7 +105,7 @@ type OrderNoteRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints OrderNoteRecord was measured from.
+// MeasuredFrom lists the endpoints OrderNoteRecord is returned by.
 func (OrderNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes",
@@ -120,7 +120,7 @@ type OrderNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints OrderNoteList was measured from.
+// MeasuredFrom lists the endpoints OrderNoteList is returned by.
 func (OrderNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes",
@@ -180,7 +180,7 @@ type OrderReadRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints OrderReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderReadRecord is returned by.
 func (OrderReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}",
@@ -246,7 +246,7 @@ type OrderInformationRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints OrderInformationRecord was measured from.
+// MeasuredFrom lists the endpoints OrderInformationRecord is returned by.
 func (OrderInformationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/information",
@@ -264,7 +264,7 @@ type AccountOrdersRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountOrdersRecord was measured from.
+// MeasuredFrom lists the endpoints AccountOrdersRecord is returned by.
 func (AccountOrdersRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/orders",
@@ -280,7 +280,7 @@ type OrderBillingPreferencesRecord struct {
 	Object             *string
 }
 
-// MeasuredFrom lists the endpoints OrderBillingPreferencesRecord was measured from.
+// MeasuredFrom lists the endpoints OrderBillingPreferencesRecord is returned by.
 func (OrderBillingPreferencesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/billing_preferences",
@@ -295,7 +295,7 @@ type OrderDiscardDraftCreateRecord struct {
 	Message *string
 }
 
-// MeasuredFrom lists the endpoints OrderDiscardDraftCreateRecord was measured from.
+// MeasuredFrom lists the endpoints OrderDiscardDraftCreateRecord is returned by.
 func (OrderDiscardDraftCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/orders/{order_id}/discard_draft",
@@ -310,7 +310,7 @@ type OrderExtendTrialCreateRecord struct {
 	Message *string
 }
 
-// MeasuredFrom lists the endpoints OrderExtendTrialCreateRecord was measured from.
+// MeasuredFrom lists the endpoints OrderExtendTrialCreateRecord is returned by.
 func (OrderExtendTrialCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/orders/{order_id}/extend_trial",
@@ -347,7 +347,7 @@ type OrderLineReadRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints OrderLineReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderLineReadRecord is returned by.
 func (OrderLineReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/lines/{line_uuid}",
@@ -367,7 +367,7 @@ type OrderLinesReadRecord struct {
 	Total             *string
 }
 
-// MeasuredFrom lists the endpoints OrderLinesReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderLinesReadRecord is returned by.
 func (OrderLinesReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/lines",
@@ -385,7 +385,7 @@ type OrderNoteFileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints OrderNoteFileList was measured from.
+// MeasuredFrom lists the endpoints OrderNoteFileList is returned by.
 func (OrderNoteFileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}/files",
@@ -401,7 +401,7 @@ type OrderNoteFileReadRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints OrderNoteFileReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderNoteFileReadRecord is returned by.
 func (OrderNoteFileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}/files/{order_file_id}",
@@ -429,7 +429,7 @@ type OrderNoteReadRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints OrderNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderNoteReadRecord is returned by.
 func (OrderNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}",
@@ -446,7 +446,7 @@ type OrderPDFReadRecord struct {
 	PDF *PDF
 }
 
-// MeasuredFrom lists the endpoints OrderPDFReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderPDFReadRecord is returned by.
 func (OrderPDFReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/pdf",
@@ -461,7 +461,7 @@ type OrderPaymentMethodReadRecord struct {
 	PaymentMethod *PaymentMethod
 }
 
-// MeasuredFrom lists the endpoints OrderPaymentMethodReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderPaymentMethodReadRecord is returned by.
 func (OrderPaymentMethodReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/payment_methods/{payment_method_ref}",
@@ -476,7 +476,7 @@ type OrderPaymentMethodsReadRecord struct {
 	PaymentMethods []PaymentMethod
 }
 
-// MeasuredFrom lists the endpoints OrderPaymentMethodsReadRecord was measured from.
+// MeasuredFrom lists the endpoints OrderPaymentMethodsReadRecord is returned by.
 func (OrderPaymentMethodsReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/payment_methods",
@@ -495,7 +495,7 @@ type OrderNoteFileRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints OrderNoteFileRecord was measured from.
+// MeasuredFrom lists the endpoints OrderNoteFileRecord is returned by.
 func (OrderNoteFileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}/files",
@@ -976,7 +976,7 @@ type OrderCustomObjectRecord struct {
 	UseIn           *string
 }
 
-// MeasuredFrom lists the endpoints OrderCustomObjectRecord was measured from.
+// MeasuredFrom lists the endpoints OrderCustomObjectRecord is returned by.
 func (OrderCustomObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/custom_objects/{custom_object_id}",
@@ -1012,7 +1012,7 @@ type OrderItemFulfillmentRecord struct {
 	Version              *int64
 }
 
-// MeasuredFrom lists the endpoints OrderItemFulfillmentRecord was measured from.
+// MeasuredFrom lists the endpoints OrderItemFulfillmentRecord is returned by.
 func (OrderItemFulfillmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/item_fulfillments/{fulfillment_id}",
@@ -1095,7 +1095,7 @@ type OrderKpisRecord struct {
 	TotalRevenue            *string
 }
 
-// MeasuredFrom lists the endpoints OrderKpisRecord was measured from.
+// MeasuredFrom lists the endpoints OrderKpisRecord is returned by.
 func (OrderKpisRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/kpis",
@@ -1126,7 +1126,7 @@ type OrderPaymentRecord struct {
 	Version                *int64
 }
 
-// MeasuredFrom lists the endpoints OrderPaymentRecord was measured from.
+// MeasuredFrom lists the endpoints OrderPaymentRecord is returned by.
 func (OrderPaymentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/payments/{payment_id}",
@@ -1174,7 +1174,7 @@ type OrderQuotePartialInvoicesRecord struct {
 	PartialInvoices []any
 }
 
-// MeasuredFrom lists the endpoints OrderQuotePartialInvoicesRecord was measured from.
+// MeasuredFrom lists the endpoints OrderQuotePartialInvoicesRecord is returned by.
 func (OrderQuotePartialInvoicesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/orders/{order_id}/quote_partial_invoices",

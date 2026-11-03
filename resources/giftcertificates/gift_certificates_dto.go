@@ -45,7 +45,7 @@ type GiftCertificateRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateRecord was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateRecord is returned by.
 func (GiftCertificateRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates",
@@ -66,7 +66,7 @@ type GiftCertificateList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateList was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateList is returned by.
 func (GiftCertificateList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates",
@@ -93,7 +93,7 @@ type GiftCertificateTransactionRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateTransactionRecord was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateTransactionRecord is returned by.
 func (GiftCertificateTransactionRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates/{gc_id}/transactions",
@@ -108,7 +108,7 @@ type GiftCertificateTransactionList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateTransactionList was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateTransactionList is returned by.
 func (GiftCertificateTransactionList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates/{gc_id}/transactions",
@@ -123,7 +123,7 @@ type GiftCertificateAllocationsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateAllocationsRecord was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateAllocationsRecord is returned by.
 func (GiftCertificateAllocationsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates/{gc_id}/allocations",
@@ -233,7 +233,7 @@ type GiftCertificateAllocationReadRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateAllocationReadRecord was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateAllocationReadRecord is returned by.
 func (GiftCertificateAllocationReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates/{gc_id}/allocations/{allocation_id}",
@@ -271,7 +271,7 @@ type GiftCertificateTransactionReadRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints GiftCertificateTransactionReadRecord was measured from.
+// MeasuredFrom lists the endpoints GiftCertificateTransactionReadRecord is returned by.
 func (GiftCertificateTransactionReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/gift_certificates/{gc_id}/transactions/{transaction_id}",

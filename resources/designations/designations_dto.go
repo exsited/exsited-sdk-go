@@ -10,7 +10,7 @@ type SettingsDesignationList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDesignationList was measured from.
+// MeasuredFrom lists the endpoints SettingsDesignationList is returned by.
 func (SettingsDesignationList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/designations",
@@ -32,7 +32,7 @@ type SettingsDesignationRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDesignationRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDesignationRecord is returned by.
 func (SettingsDesignationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/designations",

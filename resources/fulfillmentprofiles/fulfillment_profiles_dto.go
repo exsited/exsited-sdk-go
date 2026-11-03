@@ -11,7 +11,7 @@ type SettingsFulfillmentProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsFulfillmentProfileList was measured from.
+// MeasuredFrom lists the endpoints SettingsFulfillmentProfileList is returned by.
 func (SettingsFulfillmentProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/fulfillment_profiles",
@@ -35,7 +35,7 @@ type SettingsFulfillmentProfileRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsFulfillmentProfileRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsFulfillmentProfileRecord is returned by.
 func (SettingsFulfillmentProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/fulfillment_profiles",

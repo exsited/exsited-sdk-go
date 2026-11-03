@@ -47,7 +47,7 @@ type PurchaseInvoiceRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceRecord is returned by.
 func (PurchaseInvoiceRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices",
@@ -67,7 +67,7 @@ type PurchaseInvoiceList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceList is returned by.
 func (PurchaseInvoiceList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices",
@@ -100,7 +100,7 @@ type PurchaseInvoicePurchasePaymentRecord struct {
 	Version                     *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicePurchasePaymentRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicePurchasePaymentRecord is returned by.
 func (PurchaseInvoicePurchasePaymentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/purchase_payments",
@@ -116,7 +116,7 @@ type PurchaseInvoicePurchasePaymentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicePurchasePaymentList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicePurchasePaymentList is returned by.
 func (PurchaseInvoicePurchasePaymentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/purchase_payments",
@@ -141,7 +141,7 @@ type PurchaseInvoiceNoteRecord struct {
 	Watchers        []Watcher
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteRecord is returned by.
 func (PurchaseInvoiceNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes",
@@ -156,7 +156,7 @@ type PurchaseInvoiceNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteList is returned by.
 func (PurchaseInvoiceNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes",
@@ -180,7 +180,7 @@ type PurchaseInvoicesNoteRecord struct {
 	Watchers      []Watcher
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicesNoteRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicesNoteRecord is returned by.
 func (PurchaseInvoicesNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/notes",
@@ -195,7 +195,7 @@ type PurchaseInvoicesNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicesNoteList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicesNoteList is returned by.
 func (PurchaseInvoicesNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/notes",
@@ -233,7 +233,7 @@ type PurchaseInvoiceReadRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceReadRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceReadRecord is returned by.
 func (PurchaseInvoiceReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}",
@@ -255,7 +255,7 @@ type AccountPurchaseInvoicesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountPurchaseInvoicesRecord was measured from.
+// MeasuredFrom lists the endpoints AccountPurchaseInvoicesRecord is returned by.
 func (AccountPurchaseInvoicesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/purchase_invoices",
@@ -294,7 +294,7 @@ type PurchaseInvoiceInformationRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceInformationRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceInformationRecord is returned by.
 func (PurchaseInvoiceInformationRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/purchase_invoices/{purchase_invoice_id}/information",
@@ -336,7 +336,7 @@ type PurchaseInvoiceCancelRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceCancelRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceCancelRecord is returned by.
 func (PurchaseInvoiceCancelRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/purchase_invoices/{purchase_invoice_id}/cancel",
@@ -366,7 +366,7 @@ type PurchaseInvoiceNotesRecord struct {
 	Watchers         []Watcher
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNotesRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNotesRecord is returned by.
 func (PurchaseInvoiceNotesRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes",
@@ -382,7 +382,7 @@ type PurchaseInvoiceLinesRecord struct {
 	Object *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceLinesRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceLinesRecord is returned by.
 func (PurchaseInvoiceLinesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/lines",
@@ -398,7 +398,7 @@ type PurchaseInvoiceLineRecord struct {
 	Object *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceLineRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceLineRecord is returned by.
 func (PurchaseInvoiceLineRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/lines/{purchase_invoice_line_uuid}",
@@ -427,7 +427,7 @@ type PurchaseInvoiceNoteReadRecord struct {
 	Watchers        []Watcher
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteReadRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteReadRecord is returned by.
 func (PurchaseInvoiceNoteReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}",
@@ -447,7 +447,7 @@ type PurchaseInvoiceNoteFileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileList is returned by.
 func (PurchaseInvoiceNoteFileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}/files",
@@ -463,7 +463,7 @@ type PurchaseInvoiceNoteFileReadRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileReadRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileReadRecord is returned by.
 func (PurchaseInvoiceNoteFileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}/files/{file_id}",
@@ -482,7 +482,7 @@ type PurchaseInvoiceNoteFileRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoiceNoteFileRecord is returned by.
 func (PurchaseInvoiceNoteFileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}/files",
@@ -596,7 +596,7 @@ type PurchaseInvoicePurchaseCreditNoteApplicationList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicePurchaseCreditNoteApplicationList was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicePurchaseCreditNoteApplicationList is returned by.
 func (PurchaseInvoicePurchaseCreditNoteApplicationList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/purchase_credit_note_applications",
@@ -621,7 +621,7 @@ type PurchaseInvoicePurchaseCreditNoteApplicationRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints PurchaseInvoicePurchaseCreditNoteApplicationRecord was measured from.
+// MeasuredFrom lists the endpoints PurchaseInvoicePurchaseCreditNoteApplicationRecord is returned by.
 func (PurchaseInvoicePurchaseCreditNoteApplicationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/purchase_credit_note_applications",

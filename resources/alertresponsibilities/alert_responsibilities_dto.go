@@ -1,5 +1,5 @@
 package alertresponsibilities
 
-// This family has no typed views: the listing answers no record and no write could be made, so no body is known.
+// This family has no typed views.
 //
 // Every endpoint here answers ApiResponse.Map and leaves ApiResponse.DTO() nil.

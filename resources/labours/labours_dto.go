@@ -46,7 +46,7 @@ type LabourRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints LabourRecord was measured from.
+// MeasuredFrom lists the endpoints LabourRecord is returned by.
 func (LabourRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labours",
@@ -70,7 +70,7 @@ type LabourList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints LabourList was measured from.
+// MeasuredFrom lists the endpoints LabourList is returned by.
 func (LabourList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labours",
@@ -99,7 +99,7 @@ type LabourProfileRecord struct {
 	Version         *int64
 }
 
-// MeasuredFrom lists the endpoints LabourProfileRecord was measured from.
+// MeasuredFrom lists the endpoints LabourProfileRecord is returned by.
 func (LabourProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_profiles",
@@ -114,7 +114,7 @@ type LabourProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints LabourProfileList was measured from.
+// MeasuredFrom lists the endpoints LabourProfileList is returned by.
 func (LabourProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_profiles",
@@ -140,7 +140,7 @@ type LabourAvailabilityRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints LabourAvailabilityRecord was measured from.
+// MeasuredFrom lists the endpoints LabourAvailabilityRecord is returned by.
 func (LabourAvailabilityRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_availability",
@@ -155,7 +155,7 @@ type LabourAvailabilityList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints LabourAvailabilityList was measured from.
+// MeasuredFrom lists the endpoints LabourAvailabilityList is returned by.
 func (LabourAvailabilityList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_availability",
@@ -170,7 +170,7 @@ type LabourOrderList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints LabourOrderList was measured from.
+// MeasuredFrom lists the endpoints LabourOrderList is returned by.
 func (LabourOrderList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labours/{labour_uuid}/orders",
@@ -199,7 +199,7 @@ type LabourProfileReadRecord struct {
 	Version         *int64
 }
 
-// MeasuredFrom lists the endpoints LabourProfileReadRecord was measured from.
+// MeasuredFrom lists the endpoints LabourProfileReadRecord is returned by.
 func (LabourProfileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_profiles/{labour_profile_id}",
@@ -252,7 +252,7 @@ type LabourOrderRecord struct {
 	Version                  *int64
 }
 
-// MeasuredFrom lists the endpoints LabourOrderRecord was measured from.
+// MeasuredFrom lists the endpoints LabourOrderRecord is returned by.
 func (LabourOrderRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labours/{labour_uuid}/orders",
@@ -547,7 +547,7 @@ type LabourProfileSessionList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints LabourProfileSessionList was measured from.
+// MeasuredFrom lists the endpoints LabourProfileSessionList is returned by.
 func (LabourProfileSessionList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_profiles/{labour_profile_id}/sessions",
@@ -635,7 +635,7 @@ type LabourProfileSessionView struct {
 	WorkingHours  []LabourProfileViewSessionWorkingHour
 }
 
-// MeasuredFrom lists the endpoints LabourProfileSessionView was measured from.
+// MeasuredFrom lists the endpoints LabourProfileSessionView is returned by.
 func (LabourProfileSessionView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labour_profiles/{labour_profile_id}/sessions/{session_id}",
@@ -665,7 +665,7 @@ type LabourCalendarRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints LabourCalendarRecord was measured from.
+// MeasuredFrom lists the endpoints LabourCalendarRecord is returned by.
 func (LabourCalendarRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/labours/{labour_id}/availability",

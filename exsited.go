@@ -64,6 +64,8 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/milestones"
 	"github.com/exsited/exsited-sdk-go/v4/resources/noteattachments"
 	"github.com/exsited/exsited-sdk-go/v4/resources/notegroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operatorgroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operators"
 	"github.com/exsited/exsited-sdk-go/v4/resources/orders"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisation"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisations"
@@ -100,6 +102,7 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/timesheets"
 	"github.com/exsited/exsited-sdk-go/v4/resources/uom"
 	"github.com/exsited/exsited-sdk-go/v4/resources/usages"
+	"github.com/exsited/exsited-sdk-go/v4/resources/usersettings"
 	"github.com/exsited/exsited-sdk-go/v4/resources/webhooks"
 	"github.com/exsited/exsited-sdk-go/v4/resources/workflows"
 	"github.com/exsited/exsited-sdk-go/v4/resources/zones"
@@ -4903,6 +4906,72 @@ const (
 	OrdersPaymentKey         = orders.PaymentKey
 )
 
+// OperatorGroups is the operator groups endpoints bound to a client.
+type OperatorGroups = operatorgroups.OperatorGroups
+
+// The operator groups views, aliased so a type assertion works under either spelling.
+type (
+	SettingsOperatorGroupList       = operatorgroups.SettingsOperatorGroupList
+	SettingsOperatorGroupRecord     = operatorgroups.SettingsOperatorGroupRecord
+	SettingsOperatorGroupRole       = operatorgroups.SettingsOperatorGroupRole
+	SettingsOperatorGroupDepartment = operatorgroups.SettingsOperatorGroupDepartment
+	OperatorGroupsPagination        = operatorgroups.Pagination
+	OperatorGroupsPaginationLinks   = operatorgroups.PaginationLinks
+)
+
+// NewOperatorGroups binds the resource to a requester of your own.
+func NewOperatorGroups(requester Requester) *OperatorGroups { return operatorgroups.New(requester) }
+
+// SettingsOperatorGroupListShape is the DTOShape reading a body as SettingsOperatorGroupList, for the raw-verb call.
+func SettingsOperatorGroupListShape(decoded any) any {
+	return operatorgroups.SettingsOperatorGroupListShape(decoded)
+}
+
+// SettingsOperatorGroupRecordShape is the DTOShape reading a body as SettingsOperatorGroupRecord, for the raw-verb call.
+func SettingsOperatorGroupRecordShape(decoded any) any {
+	return operatorgroups.SettingsOperatorGroupRecordShape(decoded)
+}
+
+// The operator groups path templates and body keys, for the raw-verb call.
+const (
+	SettingsOperatorGroupsPath = operatorgroups.SettingsOperatorGroupsPath
+	SettingsOperatorGroupPath  = operatorgroups.SettingsOperatorGroupPath
+
+	SettingsOperatorGroupsKey = operatorgroups.SettingsOperatorGroupsKey
+	OperatorGroupKey          = operatorgroups.OperatorGroupKey
+)
+
+// Operators is the operators endpoints bound to a client.
+type Operators = operators.Operators
+
+// The operators views, aliased so a type assertion works under either spelling.
+type (
+	SettingsOperatorList     = operators.SettingsOperatorList
+	SettingsOperatorRecord   = operators.SettingsOperatorRecord
+	OperatorsPagination      = operators.Pagination
+	OperatorsPaginationLinks = operators.PaginationLinks
+)
+
+// NewOperators binds the resource to a requester of your own.
+func NewOperators(requester Requester) *Operators { return operators.New(requester) }
+
+// SettingsOperatorListShape is the DTOShape reading a body as SettingsOperatorList, for the raw-verb call.
+func SettingsOperatorListShape(decoded any) any { return operators.SettingsOperatorListShape(decoded) }
+
+// SettingsOperatorRecordShape is the DTOShape reading a body as SettingsOperatorRecord, for the raw-verb call.
+func SettingsOperatorRecordShape(decoded any) any {
+	return operators.SettingsOperatorRecordShape(decoded)
+}
+
+// The operators path templates and body keys, for the raw-verb call.
+const (
+	SettingsOperatorsPath = operators.SettingsOperatorsPath
+	SettingsOperatorPath  = operators.SettingsOperatorPath
+
+	SettingsOperatorsKey = operators.SettingsOperatorsKey
+	OperatorKey          = operators.OperatorKey
+)
+
 // Organisation is the organisation endpoints bound to a client.
 type Organisation = organisation.Organisation
 
@@ -5805,6 +5874,37 @@ const (
 
 	SettingsUomsKey = uom.SettingsUomsKey
 	UomKey          = uom.UomKey
+)
+
+// UserSettings is the user settings endpoints bound to a client.
+type UserSettings = usersettings.UserSettings
+
+// The user settings views, aliased so a type assertion works under either spelling.
+type (
+	UserSettingsRecord             = usersettings.UserSettingsRecord
+	UserSettingsProfile            = usersettings.UserSettingsProfile
+	UserSettingsDashboard          = usersettings.UserSettingsDashboard
+	UserSettingsDisplaySettings    = usersettings.UserSettingsDisplaySettings
+	UserSettingsProfileImageRecord = usersettings.UserSettingsProfileImageRecord
+)
+
+// NewUserSettings binds the resource to a requester of your own.
+func NewUserSettings(requester Requester) *UserSettings { return usersettings.New(requester) }
+
+// UserSettingsRecordShape is the DTOShape reading a body as UserSettingsRecord, for the raw-verb call.
+func UserSettingsRecordShape(decoded any) any { return usersettings.UserSettingsRecordShape(decoded) }
+
+// UserSettingsProfileImageRecordShape is the DTOShape reading a body as UserSettingsProfileImageRecord, for the raw-verb call.
+func UserSettingsProfileImageRecordShape(decoded any) any {
+	return usersettings.UserSettingsProfileImageRecordShape(decoded)
+}
+
+// The user settings path templates and body keys, for the raw-verb call.
+const (
+	UserSettingsPath             = usersettings.UserSettingsPath
+	UserSettingsProfileImagePath = usersettings.UserSettingsProfileImagePath
+
+	UserSettingsKey = usersettings.UserSettingsKey
 )
 
 // Webhooks is the webhooks endpoints bound to a client.

@@ -10,7 +10,7 @@ type SettingsShippingRuleList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingRuleList was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingRuleList is returned by.
 func (SettingsShippingRuleList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_rules",
@@ -34,7 +34,7 @@ type SettingsShippingRuleRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingRuleRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingRuleRecord is returned by.
 func (SettingsShippingRuleRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_rules",

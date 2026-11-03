@@ -14,7 +14,7 @@ import (
 type AuthConfig struct {
 	// ClientName labels this instance. Shown in logs and used to select it.
 	ClientName string
-	// BaseURL is the instance URL, e.g. https://dev-api.exsited.com.
+	// BaseURL is the instance URL, e.g. https://your-instance.example.com.
 	BaseURL  string
 	ClientID string
 	// ClientSecret is masked by String().

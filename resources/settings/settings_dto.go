@@ -52,7 +52,7 @@ type SettingsDiscountProfileRecord struct {
 	Version                    *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsDiscountProfileRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDiscountProfileRecord is returned by.
 func (SettingsDiscountProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/discount_profiles",
@@ -67,7 +67,7 @@ type SettingsDiscountProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDiscountProfileList was measured from.
+// MeasuredFrom lists the endpoints SettingsDiscountProfileList is returned by.
 func (SettingsDiscountProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/discount_profiles",
@@ -99,7 +99,7 @@ type SettingsPaymentProcessorRecord struct {
 	Version           *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentProcessorRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentProcessorRecord is returned by.
 func (SettingsPaymentProcessorRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_processors",
@@ -114,7 +114,7 @@ type SettingsPaymentProcessorList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentProcessorList was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentProcessorList is returned by.
 func (SettingsPaymentProcessorList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_processors",
@@ -146,7 +146,7 @@ type SettingsShippingProfileRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingProfileRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingProfileRecord is returned by.
 func (SettingsShippingProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_profiles",
@@ -161,7 +161,7 @@ type SettingsShippingProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingProfileList was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingProfileList is returned by.
 func (SettingsShippingProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_profiles",
@@ -190,7 +190,7 @@ type SettingsPricingLevelRecord struct {
 	TaxInclusiveBasedOn any
 }
 
-// MeasuredFrom lists the endpoints SettingsPricingLevelRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPricingLevelRecord is returned by.
 func (SettingsPricingLevelRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/pricing_levels",
@@ -205,7 +205,7 @@ type SettingsPricingLevelList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPricingLevelList was measured from.
+// MeasuredFrom lists the endpoints SettingsPricingLevelList is returned by.
 func (SettingsPricingLevelList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/pricing_levels",
@@ -233,7 +233,7 @@ type SettingsTimeZoneRecord struct {
 	TimeZonePattern *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTimeZoneRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTimeZoneRecord is returned by.
 func (SettingsTimeZoneRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/time_zones",
@@ -248,7 +248,7 @@ type SettingsTimeZoneList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTimeZoneList was measured from.
+// MeasuredFrom lists the endpoints SettingsTimeZoneList is returned by.
 func (SettingsTimeZoneList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/time_zones",
@@ -276,7 +276,7 @@ type SettingsWarehouseRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsWarehouseRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsWarehouseRecord is returned by.
 func (SettingsWarehouseRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/warehouses",
@@ -291,7 +291,7 @@ type SettingsWarehouseList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsWarehouseList was measured from.
+// MeasuredFrom lists the endpoints SettingsWarehouseList is returned by.
 func (SettingsWarehouseList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/warehouses",
@@ -318,7 +318,7 @@ type SettingsCurrencyRecord struct {
 	Symbol               *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCurrencyRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCurrencyRecord is returned by.
 func (SettingsCurrencyRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/currencies",
@@ -333,7 +333,7 @@ type SettingsCurrencyList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCurrencyList was measured from.
+// MeasuredFrom lists the endpoints SettingsCurrencyList is returned by.
 func (SettingsCurrencyList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/currencies",
@@ -358,7 +358,7 @@ type SettingsItemGroupRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsItemGroupRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsItemGroupRecord is returned by.
 func (SettingsItemGroupRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/item_groups",
@@ -373,7 +373,7 @@ type SettingsItemGroupList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsItemGroupList was measured from.
+// MeasuredFrom lists the endpoints SettingsItemGroupList is returned by.
 func (SettingsItemGroupList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/item_groups",
@@ -397,7 +397,7 @@ type CustomObjectRecord struct {
 	UseIn           *string
 }
 
-// MeasuredFrom lists the endpoints CustomObjectRecord was measured from.
+// MeasuredFrom lists the endpoints CustomObjectRecord is returned by.
 func (CustomObjectRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_objects",
@@ -412,7 +412,7 @@ type CustomObjectList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints CustomObjectList was measured from.
+// MeasuredFrom lists the endpoints CustomObjectList is returned by.
 func (CustomObjectList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_objects",
@@ -436,7 +436,7 @@ type SettingsTaxRecord struct {
 	Status             *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTaxRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTaxRecord is returned by.
 func (SettingsTaxRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/taxes",
@@ -451,7 +451,7 @@ type SettingsTaxList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTaxList was measured from.
+// MeasuredFrom lists the endpoints SettingsTaxList is returned by.
 func (SettingsTaxList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/taxes",
@@ -473,7 +473,7 @@ type SettingsVariationRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsVariationRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsVariationRecord is returned by.
 func (SettingsVariationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/variations",
@@ -488,7 +488,7 @@ type SettingsVariationList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsVariationList was measured from.
+// MeasuredFrom lists the endpoints SettingsVariationList is returned by.
 func (SettingsVariationList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/variations",
@@ -507,7 +507,7 @@ type SettingsPaymentTermRecord struct {
 	Status      *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentTermRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentTermRecord is returned by.
 func (SettingsPaymentTermRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_terms",
@@ -522,7 +522,7 @@ type SettingsPaymentTermList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentTermList was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentTermList is returned by.
 func (SettingsPaymentTermList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_terms",
@@ -552,7 +552,7 @@ type SettingsItemGroupsRecord struct {
 	Version            *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsItemGroupsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsItemGroupsRecord is returned by.
 func (SettingsItemGroupsRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/item_groups",
@@ -583,7 +583,7 @@ type SettingsCustomLogicScriptRecord struct {
 	Type          *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomLogicScriptRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomLogicScriptRecord is returned by.
 func (SettingsCustomLogicScriptRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_logic_scripts/{custom_logic_script_id}",
@@ -613,7 +613,7 @@ type SettingsCurrencyReadRecord struct {
 	Symbol               *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCurrencyReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCurrencyReadRecord is returned by.
 func (SettingsCurrencyReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/currencies/{currency_id}",
@@ -644,7 +644,7 @@ type SettingsCustomObjectCustomizeRecord struct {
 	UUID          *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomObjectCustomizeRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomObjectCustomizeRecord is returned by.
 func (SettingsCustomObjectCustomizeRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/custom_objects/{custom_object_id}/customize",
@@ -675,7 +675,7 @@ type SettingsCustomObjectsRecord struct {
 	UUID            *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomObjectsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomObjectsRecord is returned by.
 func (SettingsCustomObjectsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/custom_objects/{custom_object_id}",
@@ -704,7 +704,7 @@ type SettingsVariationsRecord struct {
 	UUID          *string
 }
 
-// MeasuredFrom lists the endpoints SettingsVariationsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsVariationsRecord is returned by.
 func (SettingsVariationsRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/variations",
@@ -737,7 +737,7 @@ type SettingsTimeZoneReadRecord struct {
 	TimeZonePattern *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTimeZoneReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTimeZoneReadRecord is returned by.
 func (SettingsTimeZoneReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/time_zones/{time_zone_id}",
@@ -755,7 +755,7 @@ type SettingsCustomLogicScriptsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomLogicScriptsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomLogicScriptsRecord is returned by.
 func (SettingsCustomLogicScriptsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_logic_scripts",
@@ -768,7 +768,7 @@ type SettingsRecord struct {
 	Resources []Resource
 }
 
-// MeasuredFrom lists the endpoints SettingsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsRecord is returned by.
 func (SettingsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings",
@@ -787,7 +787,7 @@ type SettingsFieldSettingsItemRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsFieldSettingsItemRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsFieldSettingsItemRecord is returned by.
 func (SettingsFieldSettingsItemRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/settings/field_settings/account",
@@ -801,7 +801,7 @@ type SettingsGeneralSettingsAccountUpdateRecord struct {
 	Account *Account
 }
 
-// MeasuredFrom lists the endpoints SettingsGeneralSettingsAccountUpdateRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsGeneralSettingsAccountUpdateRecord is returned by.
 func (SettingsGeneralSettingsAccountUpdateRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/settings/general_settings/account",
@@ -817,7 +817,7 @@ type SettingsGeneralSettingsItemUpdateRecord struct {
 	Product *Product
 }
 
-// MeasuredFrom lists the endpoints SettingsGeneralSettingsItemUpdateRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsGeneralSettingsItemUpdateRecord is returned by.
 func (SettingsGeneralSettingsItemUpdateRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/settings/general_settings/item",
@@ -845,7 +845,7 @@ type SettingsItemGroupReadRecord struct {
 	Version        *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsItemGroupReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsItemGroupReadRecord is returned by.
 func (SettingsItemGroupReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/item_groups/{item_group_id}",
@@ -1286,7 +1286,7 @@ type SettingsCustomObjectDefinitionList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomObjectDefinitionList was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomObjectDefinitionList is returned by.
 func (SettingsCustomObjectDefinitionList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_objects",
@@ -1311,7 +1311,7 @@ type SettingsCustomObjectDefinition struct {
 	UseIn         *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomObjectDefinition was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomObjectDefinition is returned by.
 func (SettingsCustomObjectDefinition) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_objects",
@@ -1337,7 +1337,7 @@ type SettingsCustomObjectDefinitionReadRecord struct {
 	UseIn         *string
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomObjectDefinitionReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomObjectDefinitionReadRecord is returned by.
 func (SettingsCustomObjectDefinitionReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/custom_objects/{custom_object_id}",
@@ -1367,7 +1367,7 @@ type SettingsCustomLogicScriptSavedRecord struct {
 	Code          any
 }
 
-// MeasuredFrom lists the endpoints SettingsCustomLogicScriptSavedRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsCustomLogicScriptSavedRecord is returned by.
 func (SettingsCustomLogicScriptSavedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/custom_logic_scripts",
@@ -1411,7 +1411,7 @@ type SettingsDiscountProfileReadRecord struct {
 	Version                    *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsDiscountProfileReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDiscountProfileReadRecord is returned by.
 func (SettingsDiscountProfileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/discount_profiles/{discount_profile_id}",
@@ -1447,7 +1447,7 @@ type SettingsFieldSettingList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsFieldSettingList was measured from.
+// MeasuredFrom lists the endpoints SettingsFieldSettingList is returned by.
 func (SettingsFieldSettingList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/field_settings",
@@ -1501,7 +1501,7 @@ type SettingsFieldSettingReadRecord struct {
 	SortOrder     *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsFieldSettingReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsFieldSettingReadRecord is returned by.
 func (SettingsFieldSettingReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/field_settings/{field_setting_id}",
@@ -1529,7 +1529,7 @@ type SettingsGeneralSettingsRecord struct {
 	Transaction *SettingsGeneralSettingsTransaction
 }
 
-// MeasuredFrom lists the endpoints SettingsGeneralSettingsRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsGeneralSettingsRecord is returned by.
 func (SettingsGeneralSettingsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/general_settings/{group}",
@@ -2032,7 +2032,7 @@ type SettingsPaymentProcessorSavedRecord struct {
 	Version           *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentProcessorSavedRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentProcessorSavedRecord is returned by.
 func (SettingsPaymentProcessorSavedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/payment_processors",
@@ -2078,7 +2078,7 @@ type SettingsPaymentProcessorReadRecord struct {
 	Version           *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentProcessorReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentProcessorReadRecord is returned by.
 func (SettingsPaymentProcessorReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_processors/{payment_processor_id}",
@@ -2124,7 +2124,7 @@ type SettingsPaymentTermCreatedRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentTermCreatedRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentTermCreatedRecord is returned by.
 func (SettingsPaymentTermCreatedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/payment_terms",
@@ -2147,7 +2147,7 @@ type SettingsPaymentTermReadRecord struct {
 	Status      *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentTermReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentTermReadRecord is returned by.
 func (SettingsPaymentTermReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/payment_terms/{payment_term_id}",
@@ -2177,7 +2177,7 @@ type SettingsPaymentTermUpdatedRecord struct {
 	DisplayOrder *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsPaymentTermUpdatedRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPaymentTermUpdatedRecord is returned by.
 func (SettingsPaymentTermUpdatedRecord) MeasuredFrom() []string {
 	return []string{
 		"PATCH /api/{api_version}/settings/payment_terms/{payment_term_id}",
@@ -2208,7 +2208,7 @@ type SettingsPricingLevelCreatedRecord struct {
 	TaxExempt         any
 }
 
-// MeasuredFrom lists the endpoints SettingsPricingLevelCreatedRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPricingLevelCreatedRecord is returned by.
 func (SettingsPricingLevelCreatedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/pricing_levels",
@@ -2241,7 +2241,7 @@ type SettingsPricingLevelReadRecord struct {
 	TaxInclusiveBasedOn *string
 }
 
-// MeasuredFrom lists the endpoints SettingsPricingLevelReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsPricingLevelReadRecord is returned by.
 func (SettingsPricingLevelReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/pricing_levels/{pricing_level_id}",
@@ -2285,7 +2285,7 @@ type SettingsShippingProfileReadRecord struct {
 	Version               *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsShippingProfileReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsShippingProfileReadRecord is returned by.
 func (SettingsShippingProfileReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/shipping_profiles/{shipping_profile_id}",
@@ -2332,7 +2332,7 @@ type SettingsWarehouseReadRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsWarehouseReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsWarehouseReadRecord is returned by.
 func (SettingsWarehouseReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/warehouses/{warehouse_id}",
@@ -2369,7 +2369,7 @@ type SettingsTaxReadRecord struct {
 	Status             *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTaxReadRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTaxReadRecord is returned by.
 func (SettingsTaxReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/taxes/{tax_id}",

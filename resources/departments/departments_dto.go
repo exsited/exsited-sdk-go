@@ -10,7 +10,7 @@ type SettingsDepartmentList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDepartmentList was measured from.
+// MeasuredFrom lists the endpoints SettingsDepartmentList is returned by.
 func (SettingsDepartmentList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/departments",
@@ -35,7 +35,7 @@ type SettingsDepartmentRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsDepartmentRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDepartmentRecord is returned by.
 func (SettingsDepartmentRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/departments",

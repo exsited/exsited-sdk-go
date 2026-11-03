@@ -37,7 +37,7 @@ type NoteGroupRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints NoteGroupRecord was measured from.
+// MeasuredFrom lists the endpoints NoteGroupRecord is returned by.
 func (NoteGroupRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/note_groups",
@@ -58,7 +58,7 @@ type NoteGroupList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints NoteGroupList was measured from.
+// MeasuredFrom lists the endpoints NoteGroupList is returned by.
 func (NoteGroupList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/note_groups",
@@ -73,7 +73,7 @@ type NoteGroupNotesRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints NoteGroupNotesRecord was measured from.
+// MeasuredFrom lists the endpoints NoteGroupNotesRecord is returned by.
 func (NoteGroupNotesRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/note_groups/{note_group_id}/notes",

@@ -10,7 +10,7 @@ type SettingsTimePeriodList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTimePeriodList was measured from.
+// MeasuredFrom lists the endpoints SettingsTimePeriodList is returned by.
 func (SettingsTimePeriodList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/time_periods",
@@ -34,7 +34,7 @@ type SettingsTimePeriodRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTimePeriodRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTimePeriodRecord is returned by.
 func (SettingsTimePeriodRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/time_periods",

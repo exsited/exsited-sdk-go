@@ -59,6 +59,8 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/milestones"
 	"github.com/exsited/exsited-sdk-go/v4/resources/noteattachments"
 	"github.com/exsited/exsited-sdk-go/v4/resources/notegroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operatorgroups"
+	"github.com/exsited/exsited-sdk-go/v4/resources/operators"
 	"github.com/exsited/exsited-sdk-go/v4/resources/orders"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisation"
 	"github.com/exsited/exsited-sdk-go/v4/resources/organisations"
@@ -95,6 +97,7 @@ import (
 	"github.com/exsited/exsited-sdk-go/v4/resources/timesheets"
 	"github.com/exsited/exsited-sdk-go/v4/resources/uom"
 	"github.com/exsited/exsited-sdk-go/v4/resources/usages"
+	"github.com/exsited/exsited-sdk-go/v4/resources/usersettings"
 	"github.com/exsited/exsited-sdk-go/v4/resources/webhooks"
 	"github.com/exsited/exsited-sdk-go/v4/resources/workflows"
 	"github.com/exsited/exsited-sdk-go/v4/resources/zones"
@@ -161,6 +164,8 @@ var (
 		milestones.ResourceName:                      func(requester exhttp.Requester) any { return milestones.New(requester) },
 		noteattachments.ResourceName:                 func(requester exhttp.Requester) any { return noteattachments.New(requester) },
 		notegroups.ResourceName:                      func(requester exhttp.Requester) any { return notegroups.New(requester) },
+		operatorgroups.ResourceName:                  func(requester exhttp.Requester) any { return operatorgroups.New(requester) },
+		operators.ResourceName:                       func(requester exhttp.Requester) any { return operators.New(requester) },
 		orders.ResourceName:                          func(requester exhttp.Requester) any { return orders.New(requester) },
 		organisation.ResourceName:                    func(requester exhttp.Requester) any { return organisation.New(requester) },
 		organisations.ResourceName:                   func(requester exhttp.Requester) any { return organisations.New(requester) },
@@ -197,6 +202,7 @@ var (
 		timesheets.ResourceName:                      func(requester exhttp.Requester) any { return timesheets.New(requester) },
 		uom.ResourceName:                             func(requester exhttp.Requester) any { return uom.New(requester) },
 		usages.ResourceName:                          func(requester exhttp.Requester) any { return usages.New(requester) },
+		usersettings.ResourceName:                    func(requester exhttp.Requester) any { return usersettings.New(requester) },
 		webhooks.ResourceName:                        func(requester exhttp.Requester) any { return webhooks.New(requester) },
 		workflows.ResourceName:                       func(requester exhttp.Requester) any { return workflows.New(requester) },
 		zones.ResourceName:                           func(requester exhttp.Requester) any { return zones.New(requester) },
@@ -257,6 +263,8 @@ var clientAttributeNames = map[string]bool{
 	"milestones":                        false,
 	"note_attachments":                  false,
 	"note_groups":                       false,
+	"operator_groups":                   false,
+	"operators":                         false,
 	"orders":                            false,
 	"organisation":                      false,
 	"organisations":                     false,
@@ -293,6 +301,7 @@ var clientAttributeNames = map[string]bool{
 	"timesheets":                        false,
 	"uom":                               false,
 	"usages":                            false,
+	"user_settings":                     false,
 	"webhooks":                          false,
 	"workflows":                         false,
 	"zones":                             false,

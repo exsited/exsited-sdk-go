@@ -10,7 +10,7 @@ type SettingsUomList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsUomList was measured from.
+// MeasuredFrom lists the endpoints SettingsUomList is returned by.
 func (SettingsUomList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/uom",
@@ -37,7 +37,7 @@ type SettingsUomRecord struct {
 	TypeDisplayText *string
 }
 
-// MeasuredFrom lists the endpoints SettingsUomRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsUomRecord is returned by.
 func (SettingsUomRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/uom",

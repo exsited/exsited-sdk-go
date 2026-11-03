@@ -10,7 +10,7 @@ type SettingsDocumentTemplateList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDocumentTemplateList was measured from.
+// MeasuredFrom lists the endpoints SettingsDocumentTemplateList is returned by.
 func (SettingsDocumentTemplateList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/document_templates",
@@ -38,7 +38,7 @@ type SettingsDocumentTemplateRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints SettingsDocumentTemplateRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDocumentTemplateRecord is returned by.
 func (SettingsDocumentTemplateRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/document_templates",

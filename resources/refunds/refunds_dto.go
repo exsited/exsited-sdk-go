@@ -44,7 +44,7 @@ type RefundRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints RefundRecord was measured from.
+// MeasuredFrom lists the endpoints RefundRecord is returned by.
 func (RefundRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/refunds",
@@ -63,7 +63,7 @@ type RefundList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints RefundList was measured from.
+// MeasuredFrom lists the endpoints RefundList is returned by.
 func (RefundList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/refunds",
@@ -95,7 +95,7 @@ type RefundUpdatedRecord struct {
 	Version          *int64
 }
 
-// MeasuredFrom lists the endpoints RefundUpdatedRecord was measured from.
+// MeasuredFrom lists the endpoints RefundUpdatedRecord is returned by.
 func (RefundUpdatedRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/credit_notes/{credit_note_id}/refunds",
@@ -114,7 +114,7 @@ type AccountRefundsRecord struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints AccountRefundsRecord was measured from.
+// MeasuredFrom lists the endpoints AccountRefundsRecord is returned by.
 func (AccountRefundsRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/accounts/{account_id}/refunds",
@@ -187,7 +187,7 @@ type RefundNoteList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints RefundNoteList was measured from.
+// MeasuredFrom lists the endpoints RefundNoteList is returned by.
 func (RefundNoteList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/refunds/{refund_id}/notes",
@@ -212,7 +212,7 @@ type RefundNoteRecord struct {
 	Watchers      []RefundNoteWatcher
 }
 
-// MeasuredFrom lists the endpoints RefundNoteRecord was measured from.
+// MeasuredFrom lists the endpoints RefundNoteRecord is returned by.
 func (RefundNoteRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/refunds/{refund_id}/notes",
@@ -279,7 +279,7 @@ type RefundNoteFileRecord struct {
 	UUID        *string
 }
 
-// MeasuredFrom lists the endpoints RefundNoteFileRecord was measured from.
+// MeasuredFrom lists the endpoints RefundNoteFileRecord is returned by.
 func (RefundNoteFileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/refunds/{refund_id}/notes/{note_id}/files/{file_id}",

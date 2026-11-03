@@ -10,7 +10,7 @@ type SettingsRoleList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsRoleList was measured from.
+// MeasuredFrom lists the endpoints SettingsRoleList is returned by.
 func (SettingsRoleList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/roles",
@@ -33,7 +33,7 @@ type SettingsRoleRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsRoleRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsRoleRecord is returned by.
 func (SettingsRoleRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/roles",

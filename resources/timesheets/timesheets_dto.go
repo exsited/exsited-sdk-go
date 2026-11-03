@@ -38,7 +38,7 @@ type TimesheetRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints TimesheetRecord was measured from.
+// MeasuredFrom lists the endpoints TimesheetRecord is returned by.
 func (TimesheetRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/timesheets",
@@ -53,7 +53,7 @@ type TimesheetList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints TimesheetList was measured from.
+// MeasuredFrom lists the endpoints TimesheetList is returned by.
 func (TimesheetList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/timesheets",
@@ -79,7 +79,7 @@ type TimesheetCreateRecord struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints TimesheetCreateRecord was measured from.
+// MeasuredFrom lists the endpoints TimesheetCreateRecord is returned by.
 func (TimesheetCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/timesheets",

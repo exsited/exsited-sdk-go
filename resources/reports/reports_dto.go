@@ -24,7 +24,7 @@ type ReportsAccountsAccountOverviewRecord struct {
 	Accounts *Accounts
 }
 
-// MeasuredFrom lists the endpoints ReportsAccountsAccountOverviewRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsAccountsAccountOverviewRecord is returned by.
 func (ReportsAccountsAccountOverviewRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/accounts/account_overview",
@@ -39,7 +39,7 @@ type ReportsInvoicesInvoiceOverviewReadRecord struct {
 	Invoices *Invoices
 }
 
-// MeasuredFrom lists the endpoints ReportsInvoicesInvoiceOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsInvoicesInvoiceOverviewReadRecord is returned by.
 func (ReportsInvoicesInvoiceOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/invoices/invoice_overview",
@@ -54,7 +54,7 @@ type ReportsOrdersOrderOverviewReadRecord struct {
 	Orders *Orders
 }
 
-// MeasuredFrom lists the endpoints ReportsOrdersOrderOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsOrdersOrderOverviewReadRecord is returned by.
 func (ReportsOrdersOrderOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/orders/order_overview",
@@ -69,7 +69,7 @@ type ReportsPurchaseInvoicesPurchaseInvoiceOverviewReadRecord struct {
 	PurchaseInvoices *PurchaseInvoices
 }
 
-// MeasuredFrom lists the endpoints ReportsPurchaseInvoicesPurchaseInvoiceOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsPurchaseInvoicesPurchaseInvoiceOverviewReadRecord is returned by.
 func (ReportsPurchaseInvoicesPurchaseInvoiceOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/purchase_invoices/purchase_invoice_overview",
@@ -86,7 +86,7 @@ type ReportsPurchaseOrdersPurchaseOrderOverviewReadRecord struct {
 	PurchaseOrders *PurchaseOrders
 }
 
-// MeasuredFrom lists the endpoints ReportsPurchaseOrdersPurchaseOrderOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsPurchaseOrdersPurchaseOrderOverviewReadRecord is returned by.
 func (ReportsPurchaseOrdersPurchaseOrderOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/purchase_orders/purchase_order_overview",
@@ -101,7 +101,7 @@ type ReportsPurchaseTransactionsPurchasePaymentAndRefundOverviewReadRecord struc
 	PurchasePaymentAndRefundOverview *PurchasePaymentAndRefundOverview
 }
 
-// MeasuredFrom lists the endpoints ReportsPurchaseTransactionsPurchasePaymentAndRefundOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsPurchaseTransactionsPurchasePaymentAndRefundOverviewReadRecord is returned by.
 func (ReportsPurchaseTransactionsPurchasePaymentAndRefundOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/purchase_transactions/purchase_payment_and_refund_overview",
@@ -118,7 +118,7 @@ type ReportsTransactionsPaymentAndRefundOverviewReadRecord struct {
 	PaymentAndRefundOverview *PaymentAndRefundOverview
 }
 
-// MeasuredFrom lists the endpoints ReportsTransactionsPaymentAndRefundOverviewReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReportsTransactionsPaymentAndRefundOverviewReadRecord is returned by.
 func (ReportsTransactionsPaymentAndRefundOverviewReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/reports/transactions/payment_and_refund_overview",

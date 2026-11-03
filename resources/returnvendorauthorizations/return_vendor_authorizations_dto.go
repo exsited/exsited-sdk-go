@@ -25,7 +25,7 @@ type ReturnVendorAuthorizationView struct {
 	ReceiveRvas   []any
 }
 
-// MeasuredFrom lists the endpoints ReturnVendorAuthorizationView was measured from.
+// MeasuredFrom lists the endpoints ReturnVendorAuthorizationView is returned by.
 func (ReturnVendorAuthorizationView) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/return_vendor_authorizations/{rva_id}",
@@ -67,7 +67,7 @@ type ReturnVendorAuthorizationList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ReturnVendorAuthorizationList was measured from.
+// MeasuredFrom lists the endpoints ReturnVendorAuthorizationList is returned by.
 func (ReturnVendorAuthorizationList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/return_vendor_authorizations",
@@ -94,7 +94,7 @@ type ReturnVendorAuthorization struct {
 	Version       *int64
 }
 
-// MeasuredFrom lists the endpoints ReturnVendorAuthorization was measured from.
+// MeasuredFrom lists the endpoints ReturnVendorAuthorization is returned by.
 func (ReturnVendorAuthorization) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/return_vendor_authorizations",

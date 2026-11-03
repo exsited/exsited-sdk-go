@@ -10,7 +10,7 @@ type SettingsDayOfMonthList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDayOfMonthList was measured from.
+// MeasuredFrom lists the endpoints SettingsDayOfMonthList is returned by.
 func (SettingsDayOfMonthList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/day_of_month",
@@ -33,7 +33,7 @@ type SettingsDayOfMonthRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsDayOfMonthRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsDayOfMonthRecord is returned by.
 func (SettingsDayOfMonthRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/day_of_month",

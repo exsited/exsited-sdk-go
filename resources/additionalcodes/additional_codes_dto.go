@@ -10,7 +10,7 @@ type SettingsAdditionalCodeList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsAdditionalCodeList was measured from.
+// MeasuredFrom lists the endpoints SettingsAdditionalCodeList is returned by.
 func (SettingsAdditionalCodeList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/additional_codes",
@@ -28,7 +28,7 @@ type SettingsAdditionalCodeRecord struct {
 	Status      *string
 }
 
-// MeasuredFrom lists the endpoints SettingsAdditionalCodeRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsAdditionalCodeRecord is returned by.
 func (SettingsAdditionalCodeRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/additional_codes",

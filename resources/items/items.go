@@ -62,9 +62,7 @@ func (i *Items) GetItemInformation(ctx context.Context, itemID any, raiseOnError
 
 // CreateItem creates an item: POST /api/{api_version}/items.
 //
-// {"item": {"type": "STANDARD", "name": "Widget"}} is the minimum that works. An
-// unknown group is a 400 with code internal_error and the message "Invalid group",
-// a validation failure wearing a server fault's name.
+// {"item": {"type": "STANDARD", "name": "Widget"}} is the minimum that works.
 func (i *Items) CreateItem(ctx context.Context, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	if err := requirePayload(payload); err != nil {
 		return nil, err
@@ -126,9 +124,8 @@ func (i *Items) ReactivateItem(ctx context.Context, itemID any, raiseOnError *bo
 
 // DeleteItem deletes an item: DELETE /api/{api_version}/items/{item_id}.
 //
-// A 409 with code internal_error means the item is referenced: "All Orders with
-// this Item need to be deleted". A business rule, not a server fault despite the
-// code, and not retryable.
+// An item that orders reference cannot be deleted. A business rule, not a server
+// fault, and not retryable.
 func (i *Items) DeleteItem(ctx context.Context, itemID any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
@@ -173,8 +170,7 @@ func (i *Items) GetItemSale(ctx context.Context, itemID any, raiseOnError *bool,
 }
 
 // CreateItemSale creates an item's sale configuration.
-// {"item": {"sale": {...}, "currencies": [...]}}. Answers 409 already_exists when
-// the item already has one.
+// {"item": {"sale": {...}, "currencies": [...]}}.
 //
 // POST /api/{api_version}/items/{item_id}/sale.
 func (i *Items) CreateItemSale(ctx context.Context, itemID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
@@ -223,8 +219,7 @@ func (i *Items) GetItemPurchase(ctx context.Context, itemID any, raiseOnError *b
 		ResponseFormat: format, DTOShape: ItemPurchaseViewShape})
 }
 
-// CreateItemPurchase creates an item's purchase configuration. Answers
-// 409 already_exists when one exists.
+// CreateItemPurchase creates an item's purchase configuration.
 //
 // POST /api/{api_version}/items/{item_id}/purchase.
 func (i *Items) CreateItemPurchase(ctx context.Context, itemID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
@@ -274,8 +269,7 @@ func (i *Items) GetItemInventories(ctx context.Context, itemID any, raiseOnError
 // {"item": {"inventories": {...}}}.
 //
 // The write spells warehouse management warehouse_enabled where the read returns
-// enable_warehouse_management. Turning inventory off once stock exists is refused
-// with 400 "Unable to disable Inventory Management".
+// enable_warehouse_management.
 //
 // PATCH /api/{api_version}/items/{item_id}/inventories.
 func (i *Items) UpdateItemInventories(ctx context.Context, itemID any, payload any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
@@ -314,7 +308,7 @@ func (i *Items) AddItemInventory(ctx context.Context, itemID any, payload any, r
 
 // GetItemInventoryAdjustments lists an item's inventory movements: GET /api/{api_version}/items/{item_id}/inventory_adjustments.
 //
-// Every quantity on these records is a string, "79999", not 79999: the opposite
+// Every quantity on these records is a string, not a number: the opposite
 // of what GetItemInventories returns for the same names.
 func (i *Items) GetItemInventoryAdjustments(ctx context.Context, itemID any, queryParams map[string]any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
@@ -329,7 +323,7 @@ func (i *Items) GetItemInventoryAdjustments(ctx context.Context, itemID any, que
 // GetItemWarehouseInventories retrieves one warehouse's stock for an item: GET /api/{api_version}/items/{item_id}/warehouses/{warehouse_name}/inventories.
 //
 // warehouseName is the warehouse name, not an id: the one slot in this family
-// that takes a name. A 404 names it, e.g. "warehouse 'BareHouse' not found".
+// that takes a name.
 func (i *Items) GetItemWarehouseInventories(ctx context.Context, itemID any, warehouseName any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
@@ -506,8 +500,7 @@ func (i *Items) CreateItemNote(ctx context.Context, itemID any, note string, fil
 }
 
 // UpdateItemNote updates a note's text. A form, with any files as multipart parts,
-// as the create is. Answers 400 "Invalid UUID" when noteID is not one; the message
-// names the format, not the field.
+// as the create is.
 //
 // PATCH /api/{api_version}/items/{item_id}/notes/{note_id}.
 func (i *Items) UpdateItemNote(ctx context.Context, itemID any, noteID any, note string, files map[string]any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
@@ -524,8 +517,7 @@ func (i *Items) UpdateItemNote(ctx context.Context, itemID any, noteID any, note
 		DTOShape: NoteRecordShape})
 }
 
-// DeleteItemNote deletes one note. Answers 400 "Invalid note_id" when the id is
-// not one.
+// DeleteItemNote deletes one note.
 //
 // DELETE /api/{api_version}/items/{item_id}/notes/{note_id}.
 func (i *Items) DeleteItemNote(ctx context.Context, itemID any, noteID any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {

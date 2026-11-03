@@ -10,7 +10,7 @@ type SettingsSystemEventList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsSystemEventList was measured from.
+// MeasuredFrom lists the endpoints SettingsSystemEventList is returned by.
 func (SettingsSystemEventList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/system_events",
@@ -33,7 +33,7 @@ type SettingsSystemEventRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsSystemEventRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsSystemEventRecord is returned by.
 func (SettingsSystemEventRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/system_events",

@@ -10,7 +10,7 @@ type SettingsApprovalProfileList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsApprovalProfileList was measured from.
+// MeasuredFrom lists the endpoints SettingsApprovalProfileList is returned by.
 func (SettingsApprovalProfileList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/approval_profiles",
@@ -32,7 +32,7 @@ type SettingsApprovalProfileRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsApprovalProfileRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsApprovalProfileRecord is returned by.
 func (SettingsApprovalProfileRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/approval_profiles",

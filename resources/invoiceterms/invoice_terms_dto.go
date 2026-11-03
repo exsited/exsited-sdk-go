@@ -10,7 +10,7 @@ type SettingsInvoiceTermList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsInvoiceTermList was measured from.
+// MeasuredFrom lists the endpoints SettingsInvoiceTermList is returned by.
 func (SettingsInvoiceTermList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/invoice_terms",
@@ -29,7 +29,7 @@ type SettingsInvoiceTermRecord struct {
 	Status      *string
 }
 
-// MeasuredFrom lists the endpoints SettingsInvoiceTermRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsInvoiceTermRecord is returned by.
 func (SettingsInvoiceTermRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/invoice_terms",
@@ -96,7 +96,7 @@ type SettingsInvoiceTermWriteRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsInvoiceTermWriteRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsInvoiceTermWriteRecord is returned by.
 func (SettingsInvoiceTermWriteRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/settings/invoice_terms",

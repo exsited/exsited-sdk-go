@@ -42,7 +42,7 @@ type ReturnMerchandiseAuthorisationRecord struct {
 	Warehouse     any
 }
 
-// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationRecord was measured from.
+// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationRecord is returned by.
 func (ReturnMerchandiseAuthorisationRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/return_merchandise_authorisations",
@@ -58,7 +58,7 @@ type ReturnMerchandiseAuthorisationList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationList was measured from.
+// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationList is returned by.
 func (ReturnMerchandiseAuthorisationList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/return_merchandise_authorisations",
@@ -82,7 +82,7 @@ type InvoiceReturnMerchandiseAuthorisationReceiveRecord struct {
 	UUID             *string
 }
 
-// MeasuredFrom lists the endpoints InvoiceReturnMerchandiseAuthorisationReceiveRecord was measured from.
+// MeasuredFrom lists the endpoints InvoiceReturnMerchandiseAuthorisationReceiveRecord is returned by.
 func (InvoiceReturnMerchandiseAuthorisationReceiveRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/return_merchandise_authorisations/{rma_code}/receive",
@@ -103,7 +103,7 @@ type InvoiceReturnMerchandiseAuthorisationReceiveList struct {
 	URL                                    *string
 }
 
-// MeasuredFrom lists the endpoints InvoiceReturnMerchandiseAuthorisationReceiveList was measured from.
+// MeasuredFrom lists the endpoints InvoiceReturnMerchandiseAuthorisationReceiveList is returned by.
 func (InvoiceReturnMerchandiseAuthorisationReceiveList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/return_merchandise_authorisations/{rma_code}/receive",
@@ -135,7 +135,7 @@ type ReturnMerchandiseAuthorisationReadRecord struct {
 	Warehouse     any
 }
 
-// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationReadRecord was measured from.
+// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationReadRecord is returned by.
 func (ReturnMerchandiseAuthorisationReadRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/invoices/{invoice_id}/return_merchandise_authorisations/{rma_id}",
@@ -160,7 +160,7 @@ type ReturnMerchandiseAuthorisationsRecord struct {
 	Version                        *int64
 }
 
-// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationsRecord was measured from.
+// MeasuredFrom lists the endpoints ReturnMerchandiseAuthorisationsRecord is returned by.
 func (ReturnMerchandiseAuthorisationsRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/return_merchandise_authorisations",

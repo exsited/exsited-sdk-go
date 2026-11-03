@@ -10,7 +10,7 @@ type ActionScriptList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints ActionScriptList was measured from.
+// MeasuredFrom lists the endpoints ActionScriptList is returned by.
 func (ActionScriptList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/action_scripts",
@@ -36,7 +36,7 @@ type ActionScriptRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints ActionScriptRecord was measured from.
+// MeasuredFrom lists the endpoints ActionScriptRecord is returned by.
 func (ActionScriptRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/action_scripts",

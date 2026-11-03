@@ -10,7 +10,7 @@ type SettingsEmailTemplateList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsEmailTemplateList was measured from.
+// MeasuredFrom lists the endpoints SettingsEmailTemplateList is returned by.
 func (SettingsEmailTemplateList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/email_templates",
@@ -42,7 +42,7 @@ type SettingsEmailTemplateRecord struct {
 	TrackLinkClick   *bool
 }
 
-// MeasuredFrom lists the endpoints SettingsEmailTemplateRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsEmailTemplateRecord is returned by.
 func (SettingsEmailTemplateRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/email_templates",

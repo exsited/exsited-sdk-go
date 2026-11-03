@@ -24,7 +24,7 @@ type PortalLoginRecord struct {
 	User *User
 }
 
-// MeasuredFrom lists the endpoints PortalLoginRecord was measured from.
+// MeasuredFrom lists the endpoints PortalLoginRecord is returned by.
 func (PortalLoginRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/portal/login",
@@ -39,7 +39,7 @@ type PortalChangePasswordCreateRecord struct {
 	Message *string
 }
 
-// MeasuredFrom lists the endpoints PortalChangePasswordCreateRecord was measured from.
+// MeasuredFrom lists the endpoints PortalChangePasswordCreateRecord is returned by.
 func (PortalChangePasswordCreateRecord) MeasuredFrom() []string {
 	return []string{
 		"POST /api/{api_version}/portal/change_password",

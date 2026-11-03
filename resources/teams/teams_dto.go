@@ -10,7 +10,7 @@ type SettingsTeamList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsTeamList was measured from.
+// MeasuredFrom lists the endpoints SettingsTeamList is returned by.
 func (SettingsTeamList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/teams",
@@ -34,7 +34,7 @@ type SettingsTeamRecord struct {
 	Version       any
 }
 
-// MeasuredFrom lists the endpoints SettingsTeamRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsTeamRecord is returned by.
 func (SettingsTeamRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/teams",

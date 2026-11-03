@@ -10,7 +10,7 @@ type SettingsFulfillmentTermList struct {
 	URL        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsFulfillmentTermList was measured from.
+// MeasuredFrom lists the endpoints SettingsFulfillmentTermList is returned by.
 func (SettingsFulfillmentTermList) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/fulfillment_terms",
@@ -34,7 +34,7 @@ type SettingsFulfillmentTermRecord struct {
 	Status        *string
 }
 
-// MeasuredFrom lists the endpoints SettingsFulfillmentTermRecord was measured from.
+// MeasuredFrom lists the endpoints SettingsFulfillmentTermRecord is returned by.
 func (SettingsFulfillmentTermRecord) MeasuredFrom() []string {
 	return []string{
 		"GET /api/{api_version}/settings/fulfillment_terms",

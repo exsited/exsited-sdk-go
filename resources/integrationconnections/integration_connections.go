@@ -16,8 +16,8 @@ type IntegrationConnections struct {
 }
 
 // GetIntegrationConnections sends GET /api/{api_version}/integration_connections. Filter by status with
-// filter_status, which FilterParam("status") builds: ACTIVE, INACTIVE or DISCONNECTED. v4 ignores a plain
-// status parameter and answers 200 whatever its value.
+// filter_status, which FilterParam("status") builds: ACTIVE, INACTIVE or DISCONNECTED. A plain
+// status parameter is not a filter.
 func (i *IntegrationConnections) GetIntegrationConnections(ctx context.Context, queryParams map[string]any, raiseOnError *bool, responseFormat ...string) (*exhttp.ApiResponse, error) {
 	format, err := oneResponseFormat(responseFormat)
 	if err != nil {
